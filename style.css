@@ -1,5 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Style général de la modale */
+.modal {
+  display: none; /* Initialement cachée */
+  position: fixed;
+  z-index: 1000; /* S'assurer qu'elle est au-dessus du contenu */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond sombre plus subtil */
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Transition douce pour l'apparition et la disparition de la modale */
+}
+
+.modal.show {
+  display: block;
+  opacity: 1; /* Rendre visible lorsque la classe 'show' est ajoutée */
+}
+
+/* Contenu de la modale */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; /* Réduire la marge pour mieux utiliser l'espace de l'écran */
+  padding: 40px 50px; /* Plus d'espace autour du contenu pour un look aéré */
+  width: 60%; /* Plus compact pour un effet plus élégant */
+  max-width: 1000px; /* Réduire la largeur pour un aspect plus contenu */
+  position: relative;
+  border-radius: 12px; /* Coins arrondis, mais subtils */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus douce pour un aspect minimaliste */
+  overflow: hidden; /* Éviter le débordement d'éléments */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out; /* Animation d'échelle pour l'apparition */
+  font-family: 'Poppins', sans-serif; /* Police propre et moderne */
+}
+
+/* Galerie d'images de la modale */
+.image-gallery {
+  display: flex;
+  flex-direction: column; /* Changer la direction en colonne pour que la description soit au-dessus */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 15px; /* Espacement modéré entre la description et l'image */
+  margin-top: 20px; /* Espacement entre la description et l'image */
+}
+
+.gallery-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-image {
+  max-width: 80%; /* Limiter la largeur de l'image à 80% de la modale */
+  max-height: 400px; /* Limiter la hauteur de l'image à 400px */
+  object-fit: contain; /* Maintenir les proportions sans déformer l'image */
+  display: block;
+  margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+/* Flèches de navigation dans la galerie */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* Couleur de fond sobre et discrète */
+  color: white;
+  border-radius: 50%; /* Coins arrondis pour un look moderne */
+  padding: 15px;
+  font-size: 36px; /* Taille plus modérée pour éviter d'alourdir le design */
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animation de couleur et de taille */
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Intensifier la couleur de fond au survol */
+  transform: scale(1.1); /* Agrandir légèrement la flèche pour l'effet d'interaction */
+}
+
+.prev-btn {
+  left: 15px; /* Espacement réduit près du bord */
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* Bouton pour fermer la modale */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px; /* Taille modérée pour rester sobre */
+  font-weight: 400; /* Poids léger pour plus d'élégance */
+  color: #333; /* Couleur neutre */
+  cursor: pointer;
+  z-index: 20;
+  transition: color 0.3s ease, transform 0.3s ease; /* Ajouter une animation pour la couleur et la taille */
+}
+
+.close:hover {
+  color: #ff5733; /* Subtile couleur au survol */
+  transform: scale(1.1); /* Agrandir légèrement le bouton au survol */
+}
+
+/* Description du projet dans la modale */
+.project-description {
+  text-align: center;
+  margin-top: 20px; /* Espacement réduit */
+}
+
+.project-description h2 {
+  font-size: 2rem; /* Taille modérée pour un look plus élégant */
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500; /* Poids de police léger */
+}
+
+.project-description p {
+  font-size: 1.25rem; /* Légèrement plus petit que précédemment pour garder la hiérarchie */
+  color: #555;
+  max-width: 85%;
+  margin: 0 auto;
+  line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+  text-align: justify; /* Alignement du texte pour un effet plus professionnel */
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +139,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
+    margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5; /* Ajout d'un fond plus clair */
 }
 
 html {

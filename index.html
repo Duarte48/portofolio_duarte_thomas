@@ -5,405 +5,534 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#555',
+              secondary: '#147efb',
+              light: '#f9f9f9',
+              dark: '#333'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Duarte Thomas</div>
+  <body class="bg-white text-dark">
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav" class="hidden md:flex justify-between items-center py-4 px-12">
+      <div class="text-xl font-bold">Duarte Thomas</div>
       <div>
-        <ul class="nav-links">
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#experience">Expérience</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="flex gap-8">
+          <li><a href="#about" class="hover:text-secondary transition-colors">A propos</a></li>
+          <li><a href="#experience" class="hover:text-secondary transition-colors">Expérience</a></li>
+          <li><a href="#projects" class="hover:text-secondary transition-colors">Projets</a></li>
+          <li><a href="#contact" class="hover:text-secondary transition-colors">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Duarte Thomas</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    
+    <!-- Mobile Navigation -->
+    <nav id="hamburger-nav" class="flex md:hidden justify-between items-center py-4 px-8">
+      <div class="text-xl font-bold">Duarte Thomas</div>
+      <div class="relative">
+        <div class="hamburger-icon cursor-pointer" onclick="toggleMenu()">
+          <span class="block w-6 h-0.5 bg-dark mb-1.5"></span>
+          <span class="block w-6 h-0.5 bg-dark mb-1.5"></span>
+          <span class="block w-6 h-0.5 bg-dark"></span>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Expérience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="menu-links hidden absolute right-0 top-10 bg-white shadow-lg py-4 px-8 min-w-[200px] rounded-md z-10">
+          <li class="list-none mb-2"><a href="#about" onclick="toggleMenu()" class="hover:text-secondary">A propos</a></li>
+          <li class="list-none mb-2"><a href="#experience" onclick="toggleMenu()" class="hover:text-secondary">Expérience</a></li>
+          <li class="list-none mb-2"><a href="#projects" onclick="toggleMenu()" class="hover:text-secondary">Projects</a></li>
+          <li class="list-none"><a href="#contact" onclick="toggleMenu()" class="hover:text-secondary">Contact</a></li>
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/IMG_1005.JPG" alt="John Doe profile picture" />
+    
+    <!-- Profile Section -->
+    <section id="profile" class="py-16 px-4 flex flex-col md:flex-row items-center justify-center gap-12">
+      <div class="w-64 h-64 rounded-full overflow-hidden">
+        <img src="./assets/IMG_1005.JPG" alt="John Doe profile picture" class="w-full h-full object-cover" />
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hey ! Je suis </p>
-        <h1 class="title">Duarte Thomas</h1>
-        <p class="section__text__p2">Etudiant en développement</p>
-        <div class="btn-container">
+      <div class="text-center md:text-left">
+        <p class="text-lg mb-2">Hey ! Je suis </p>
+        <h1 class="text-4xl font-bold mb-2">Duarte Thomas</h1>
+        <p class="text-xl mb-6">Etudiant en développement</p>
+        <div class="flex justify-center md:justify-start gap-4 mb-6">
           <button
-            class="btn btn-color-2"
+            class="px-4 py-2 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors"
             onclick="window.open('./assets/resume-example.pdf')"
           >
-             CV
+            CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button 
+            class="px-4 py-2 bg-gray-800 text-white font-medium rounded hover:bg-gray-700 transition-colors" 
+            onclick="location.href='./#contact'"
+          >
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
+        <div class="flex justify-center md:justify-start gap-4">
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
-            class="icon"
+            class="w-8 h-8 cursor-pointer"
             onclick="location.href='https://linkedin.com/'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
-            class="icon"
+            class="w-8 h-8 cursor-pointer"
             onclick="location.href='https://github.com/'"
           />
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">En savoir plus</p>
-      <h1 class="title-about">A propos de moi</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-light">
+      <p class="text-center text-lg mb-2">En savoir plus</p>
+      <h1 class="text-3xl font-bold text-center mb-12">A propos de moi</h1>
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-full md:w-1/3">
           <img
             src="./assets/arbre.webp"
             alt="Profile picture"
-            class="about-pic"
+            class="rounded-3xl w-full h-auto"
           />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
+        <div class="w-full md:w-2/3">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
-                class="icon"
+                class="w-8 h-8 mb-4"
               />
-              <h3>Expérience</h3>
+              <h3 class="text-xl font-semibold mb-2">Expérience</h3>
               <p>Stage - RCM<br />Backend - Frontend Développement</p>
             </div>
-            <div class="details-container">
+            <div class="bg-white p-6 rounded-xl shadow-sm">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
-                class="icon"
+                class="w-8 h-8 mb-4"
               />
-              <h3>Education</h3>
+              <h3 class="text-xl font-semibold mb-2">Education</h3>
               <p>Baccalauréat - STI2D<br />Brevet de technicien supérieur - SIO</p>
             </div>
           </div>
-          <div class="text-container">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
             <p>
-              Actuellement étudiant en dernière année de BTS Services Informatiques aux Organisations, j’ai eu l’opportunité de consolider mes compétences à travers des stages enrichissants et une formation académique rigoureuse. Ces expériences m’ont permis d’affiner mon vocabulaire technique et d’acquérir une expertise pratique, me préparant ainsi à relever les défis du secteur informatique avec assurance et professionnalisme.
-              </p>              
+              Actuellement étudiant en dernière année de BTS Services Informatiques aux Organisations, j'ai eu l'opportunité de consolider mes compétences à travers des stages enrichissants et une formation académique rigoureuse. Ces expériences m'ont permis d'affiner mon vocabulaire technique et d'acquérir une expertise pratique, me préparant ainsi à relever les défis du secteur informatique avec assurance et professionnalisme.
+            </p>              
           </div>
         </div>
       </div>
-      
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explorez mon<p>
-      <h1 class="title-xp">Expérience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Expérimenté</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Expérimenté</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>UI</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Symfony</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
     
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Parcourir mes récents</p>
-      <h1 class="title">Projets</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project1py.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">M2L</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project2lypso.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Lypso</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-4">
+      <p class="text-center text-lg mb-2">Explorez mon</p>
+      <h1 class="text-3xl font-bold text-center mb-12">Expérience</h1>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Frontend Development -->
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h2 class="text-2xl font-semibold mb-6">Frontend Development</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">HTML</h3>
+                  <p class="text-gray-600">Expérimenté</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">CSS</h3>
+                  <p class="text-gray-600">Expérimenté</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">SASS</h3>
+                  <p class="text-gray-600">Basique</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">JavaScript</h3>
+                  <p class="text-gray-600">Basique</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">TypeScript</h3>
+                  <p class="text-gray-600">Basique</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">UI</h3>
+                  <p class="text-gray-600">Intermédiaire</p>
+                </div>
+              </article>
             </div>
           </div>
           
+          <!-- Backend Development -->
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h2 class="text-2xl font-semibold mb-6">Backend Development</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">PostgreSQL</h3>
+                  <p class="text-gray-600">Basique</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">Node JS</h3>
+                  <p class="text-gray-600">Basique</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">PHP</h3>
+                  <p class="text-gray-600">Intermédiaire</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">Symfony</h3>
+                  <p class="text-gray-600">Intermédiaire</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">Laravel</h3>
+                  <p class="text-gray-600">Intermédiaire</p>
+                </div>
+              </article>
+              <article class="flex items-start gap-3">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="w-6 h-6 mt-1"
+                />
+                <div>
+                  <h3 class="font-semibold">Git</h3>
+                  <p class="text-gray-600">Intermédiaire</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 bg-light">
+      <p class="text-center text-lg mb-2">Parcourir mes récents</p>
+      <h1 class="text-3xl font-bold text-center mb-12">Projets</h1>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-md">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/project1py.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">M2L</h2>
+              <p class="mb-4 text-gray-600">Une application de gestion des membres et des événements pour une association.</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+  onclick="location.href='https://github.com/'"
+>
+  Github
+</button>
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://tonsiteweb.com/m2l-demo'"
+                >
+                  Live Demo
+                </button>
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModal()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-md">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/project2lypso.png"
+                alt="Project 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-4">Lypso</h2>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-md">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-4">Project Two</h2>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 4 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-md">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-4">Project Three</h2>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal for Project Details -->
+      <div id="project-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-5xl w-full mx-auto relative">
+          <!-- Bouton fermeture amélioré -->
+          <span class="absolute top-4 right-4 text-3xl cursor-pointer font-bold hover:text-gray-600 z-20" onclick="closeModal()">&times;</span>
+          
+          <div class="p-8">
+            <!-- Galerie d'images agrandie -->
+            <div class="relative">
+              <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100" onclick="moveImage(-1)">&#10094;</button>
+              
+              <div class="gallery-container overflow-hidden rounded-lg">
+                <div class="flex transition-transform duration-300 h-80">
+                  <img src="./assets/project-1.png" alt="Image 1" class="w-full h-full object-cover flex-shrink-0">
+                  <img src="./assets/project1py.png" alt="Image 2" class="w-full h-full object-cover flex-shrink-0">
+                  <img src="./assets/project1py.png" alt="Image 3" class="w-full h-full object-cover flex-shrink-0">
+                </div>
+              </div>
+              
+              <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100" onclick="moveImage(1)">&#10095;</button>
+            </div>
+            
+            <!-- Contenu descriptif amélioré -->
+            <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+              <h2 class="text-2xl font-bold mb-4">M2L - Gestion des Membres</h2>
+              <p class="text-gray-700 mb-4">Une application pour gérer les membres et les événements dans une association. Développée avec Laravel et Vue.js.</p>
+              
+              <!-- Ajout de technologies utilisées -->
+              <div class="mt-4">
+                <h3 class="font-semibold mb-2">Technologies utilisées:</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Entrer en contact</p>
-      <h1 class="title">Contactez-moi !</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">duarte.thomas33@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/thomas-duarte-b787142bb/">LinkedIn</a></p>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4">
+      <p class="text-center text-lg mb-2">Entrer en contact</p>
+      <h1 class="text-3xl font-bold text-center mb-12">Contactez-moi !</h1>
+      <div class="max-w-2xl mx-auto">
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="w-8 h-8"
+            />
+            <p><a href="mailto:duarte.thomas33@gmail.com" class="hover:text-secondary">duarte.thomas33@gmail.com</a></p>
+          </div>
+          <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="w-8 h-8"
+            />
+            <p><a href="https://www.linkedin.com/in/thomas-duarte-b787142bb/" class="hover:text-secondary">LinkedIn</a></p>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">A propos</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 px-4">
+      <div class="max-w-6xl mx-auto">
+        <nav class="mb-6">
+          <ul class="flex justify-center gap-8 flex-wrap">
+            <li><a href="#about" class="hover:text-secondary transition-colors">A propos</a></li>
+            <li><a href="#experience" class="hover:text-secondary transition-colors">Expérience</a></li>
+            <li><a href="#projects" class="hover:text-secondary transition-colors">Projets</a></li>
+            <li><a href="#contact" class="hover:text-secondary transition-colors">Contact</a></li>
           </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 Duarte Thomas. All Rights Reserved.</p>
+        </nav>
+        <p class="text-center">Copyright &#169; 2025 Duarte Thomas. All Rights Reserved.</p>
+      </div>
     </footer>
-    <script src="script.js"></script>
+    
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        menu.classList.toggle("hidden");
+      }
+      
+      let currentImageIndex = 0;
+      const totalImages = document.querySelectorAll('.gallery-container img').length;
+      
+      function openModal() {
+        document.getElementById('project-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeModal() {
+        document.getElementById('project-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+      
+      function moveImage(direction) {
+        currentImageIndex += direction;
+        
+        if (currentImageIndex < 0) {
+          currentImageIndex = totalImages - 1;
+        } else if (currentImageIndex >= totalImages) {
+          currentImageIndex = 0;
+        }
+        
+        const galleryContainer = document.querySelector('.gallery-container > div');
+        galleryContainer.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+      }
+    </script>
   </body>
 </html>
