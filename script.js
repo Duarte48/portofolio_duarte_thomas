@@ -1,4 +1,4 @@
-// Fonction pour afficher/masquer le menu hamburger
+// === 1. Hamburger Menu ===
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -6,66 +6,61 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Variables pour la gestion des images dans la modale
-let currentImageIndex = 0;
-let images = document.querySelectorAll(".gallery-image");
+// === 2. Sélection des éléments du modal ===
+const modal         = document.getElementById('project-modal');
+const titleEl       = document.getElementById('modal-title');
+const descEl        = document.getElementById('modal-desc');
+const gallery       = document.getElementById('modal-gallery');
+const techsContainer= document.getElementById('modal-techs');
 
-// Ouvrir la modale
-function openModal() {
-  const modal = document.querySelector(".modal");
-  modal.classList.add("show"); // Ajoute la classe pour afficher la modale
-  currentImageIndex = 0; // Réinitialiser l'index à 0
-  updateModalImage(); // Mettre à jour l'image visible
-}
+// === 3. Ouvrir le modal en fonction de la carte cliquée ===
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // 3.1 Récupère les données
+    const title       = card.dataset.title;
+    const description = card.dataset.description;
+    const images      = JSON.parse(card.dataset.images);
+    const techs       = JSON.parse(card.dataset.techs);
 
-// Fermer la modale
-function closeModal() {
-  const modal = document.querySelector(".modal");
-  modal.classList.remove("show"); // Enlever la classe pour masquer la modale
-}
+    // 3.2 Injecte titre & description
+    titleEl.innerText = title;
+    descEl.innerText  = description;
 
-// Mettre à jour l'image visible dans la modale
-function updateModalImage() {
-  // Cacher toutes les images
-  images.forEach((img) => {
-    img.style.display = "none";
+    // 3.3 Construit la galerie
+    gallery.innerHTML = '';
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src    = src;
+      img.alt    = title;
+      img.className = 'w-48 h-32 object-cover rounded-lg flex-shrink-0';
+      gallery.appendChild(img);
+    });
+
+    // 3.4 Construit la liste de technologies
+    techsContainer.innerHTML = '';
+    techs.forEach(tech => {
+      const span = document.createElement('span');
+      span.innerText   = tech;
+      span.className   = 'bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm';
+      techsContainer.appendChild(span);
+    });
+
+    // 3.5 Affiche le modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   });
-
-  // Afficher l'image courante
-  if (images[currentImageIndex]) {
-    images[currentImageIndex].style.display = "block";
-  }
-}
-
-// Déplacer l'image suivante ou précédente
-function moveImage(direction) {
-  const totalImages = images.length;
-
-  // Calculer le nouvel index
-  currentImageIndex += direction;
-
-  // Si on est à la fin, revenir au début ou à la fin selon la direction
-  if (currentImageIndex < 0) {
-    currentImageIndex = totalImages - 1;
-  } else if (currentImageIndex >= totalImages) {
-    currentImageIndex = 0;
-  }
-
-  // Mettre à jour l'image visible
-  updateModalImage();
-}
-
-// Ajouter les écouteurs d'événements
-document.querySelector(".close").addEventListener("click", closeModal);
-
-// Permet de fermer la modale en cliquant à l'extérieur de la modale (zone sombre)
-window.addEventListener("click", (e) => {
-  const modal = document.querySelector(".modal");
-  if (e.target === modal) {
-    closeModal(); // Si on clique à l'extérieur, on ferme la modale
-  }
 });
 
-// Ajouter les écouteurs pour les boutons de navigation (précédent/suivant)
-document.querySelector(".prev-btn").addEventListener("click", () => moveImage(-1)); // Bouton précédent
-document.querySelector(".next-btn").addEventListener("click", () => moveImage(1)); // Bouton suivant
+// === 4. Fermer le modal ===
+function closeModal() {
+  modal.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+// bouton « × »
+document.querySelector('#project-modal .absolute').addEventListener('click', closeModal);
+
+// clic en dehors du contenu
+window.addEventListener('click', e => {
+  if (e.target === modal) closeModal();
+});
