@@ -27,11 +27,49 @@
       <div class="text-xl font-bold">Duarte Thomas</div>
       <div>
         <ul class="flex gap-8">
-          <li><a href="#about" class="hover:text-secondary transition-colors">A propos</a></li>
-          <li><a href="#experience" class="hover:text-secondary transition-colors">Expérience</a></li>
-          <li><a href="#projects" class="hover:text-secondary transition-colors">Projets</a></li>
-          <li><a href="#contact" class="hover:text-secondary transition-colors">Contact</a></li>
-        </ul>
+  <li>
+    <a href="#about"
+       class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">
+      A propos
+    </a>
+  </li>
+  <li>
+    <a href="#experience"
+       class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">
+      Expérience
+    </a>
+  </li>
+  <li>
+    <a href="#projects"
+       class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">
+      Projets
+    </a>
+  </li>
+  <li>
+    <a href="#contact"
+       class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">
+      Contact
+    </a>
+  </li>
+</ul>
+
+
       </div>
     </nav>
     
@@ -61,34 +99,44 @@
       <div class="text-center md:text-left">
         <p class="text-lg mb-2">Bonjour, Je suis </p>
         <h1 class="text-4xl font-bold mb-2">Duarte Thomas</h1>
-        <p class="text-xl mb-6">Etudiant en développement</p>
+        <p class="text-xl mb-6">Etudiant développeur</p>
         <div class="flex justify-center md:justify-start gap-4 mb-6">
           <button
-            class="px-4 py-2 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors"
-            onclick="window.open('./assets/resume-example.pdf')"
+            class="px-4 py-2 border-2 border-gray-700 text-gray-700 font-medium rounded-lg
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-1 hover:shadow-xl"
+                  target="_blank"
+            onclick="window.open('./assets/CV%20Duarte%20Thomas.pdf')"
           >
             CV
           </button>
-          <button 
-            class="px-4 py-2 bg-gray-800 text-white font-medium rounded hover:bg-gray-700 transition-colors" 
-            onclick="location.href='./#contact'"
+          <button
+            class="px-4 py-2 bg-gray-800 text-white font-medium rounded-lg
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-1 
+                  hover:from-gray-700 hover:to-gray-600 hover:shadow-xl"
+            onclick="location.href='#contact'"
           >
             Contact Info
           </button>
         </div>
+
+
         <div class="flex justify-center md:justify-start gap-4">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="w-8 h-8 cursor-pointer"
-            onclick="location.href='https://www.linkedin.com/in/thomas-duarte-b787142bb/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="w-8 h-8 cursor-pointer"
-            onclick="location.href='https://github.com/Duarte48'"
-          />
+          <a href="https://www.linkedin.com/in/thomas-duarte-b787142bb/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-200"
+            />
+          </a>
+          <a href="https://github.com/Duarte48" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-200"
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -316,11 +364,57 @@
     </section>
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-4 bg-light">
-      <p class="text-center text-lg mb-2">Parcourir mes récents</p>
+      <p class="text-center text-lg mb-2">Mes récents</p>
       <h1 class="text-3xl font-bold text-center mb-12">Projets</h1>
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalRedirigeRcm()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/rcm.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Refont Intranet RCM</h2>
+              <p class="mb-4 text-gray-600">Refonte complète de l'intranet de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalRedirigeRcm()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalRefontRcm()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/rcmrefont.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Refont Portail de données RCM</h2>
+              <p class="mb-4 text-gray-600">Refonte complète du portail de données de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalRefontRcm()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
 
           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
           onclick="openModalGestsup()"
@@ -514,34 +608,217 @@
             </div>
           </div>
 
-
-          <!-- Project 2 -->
-          <div class="bg-white rounded-xl overflow-hidden shadow-md">
-            <div class="h-48 overflow-hidden">
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalAlisales()"
+          >              <div class="h-48 overflow-hidden">
               <img
-                src="./assets/project2lypso.png"
-                alt="Project 2"
+                src="./assets/alisales.png"
+                alt="Project 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-semibold mb-4">Lypso</h2>
+              <h2 class="text-xl font-semibold mb-2">AliSales</h2>
+              <p class="mb-4 text-gray-600">Développement d'une application desktop monolithique</p>
               <div class="flex flex-wrap gap-2">
                 <button
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
                   onclick="location.href='https://github.com/Duarte48'"
                 >
                   Github
                 </button>
-               
               
+            
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalAlisales()"
+                >
+                  Voir Plus
+                </button>
               </div>
             </div>
           </div>
-          
-      
-      
-     
+
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalAliapi()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/aliapi.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">AliApi</h2>
+              <p class="mb-4 text-gray-600">Développement d’une API REST</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+                  onclick="location.href='https://github.com/Duarte48'"
+                >
+                  Github
+                </button>
+              
+            
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalAliapi()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalGiveMeSome()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/givemesome.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">GiveMeSomeApi</h2>
+              <p class="mb-4 text-gray-600">Développement d'une API et programmation de base de données</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+                  onclick="location.href='https://github.com/Duarte48'"
+                >
+                  Github
+                </button>
+              
+            
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalGiveMeSome()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalPreservation()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/Preservation.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Préservation de l'identité numérique</h2>
+              <p class="mb-4 text-gray-600">Mise en place de moyens de preuves sécurisés conformes à la législation. Sécurisation des communications électroniques.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalPreservation()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalProtection()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/Protection.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Protection des Données</h2>
+              <p class="mb-4 text-gray-600">Analyse et mise en conformité RGPD pour CentreCall, incluant la création d'un registre des traitements.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalProtectionn()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalSecurisation()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/Secursiation.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Sécurisation des équipements</h2>
+              <p class="mb-4 text-gray-600">Mise en place de KeePass, analyse de la force des mots de passe et sensibilisation à la sécurité</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalSecurisation()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalSecurisationWeb()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/Securisationweb.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Sécurisation Web</h2>
+              <p class="mb-4 text-gray-600">Audit de sécurité, identification et correction des vulnérabilités selon les standards OWASP</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalSecurisationWeb()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalSecuriteApp()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/Securitéapp.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Sécurité Applicative</h2>
+              <p class="mb-4 text-gray-600"> Implémentation de mécanismes de chiffrement, authentification sécurisée et principes de Securités</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalSecuriteApp()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
     </section>
     
     <!-- Contact Section -->
@@ -556,7 +833,11 @@
               alt="Email icon"
               class="w-8 h-8"
             />
-            <p><a href="mailto:duarte.thomas33@gmail.com" class="hover:text-secondary">duarte.thomas33@gmail.com</a></p>
+            <p><a href="mailto:duarte.thomas33@gmail.com" target="_blank" class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">duarte.thomas33@gmail.com</a></p>
           </div>
           <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
             <img
@@ -564,7 +845,11 @@
               alt="LinkedIn icon"
               class="w-8 h-8"
             />
-            <p><a href="https://www.linkedin.com/in/thomas-duarte-b787142bb/" class="hover:text-secondary">LinkedIn</a></p>
+            <p><a href="https://www.linkedin.com/in/thomas-duarte-b787142bb/" target="_blank" class="relative text-current transition-colors duration-300
+              hover:text-black
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+              after:h-[2px] after:w-0 after:bg-black
+              after:transition-all after:duration-300 hover:after:w-full">LinkedIn</a></p>
           </div>
         </div>
       </div>
@@ -573,14 +858,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-8 px-4">
       <div class="max-w-6xl mx-auto">
-        <nav class="mb-6">
-          <ul class="flex justify-center gap-8 flex-wrap">
-            <li><a href="#about" class="hover:text-secondary transition-colors">A propos</a></li>
-            <li><a href="#experience" class="hover:text-secondary transition-colors">Expérience</a></li>
-            <li><a href="#projects" class="hover:text-secondary transition-colors">Projets</a></li>
-            <li><a href="#contact" class="hover:text-secondary transition-colors">Contact</a></li>
-          </ul>
-        </nav>
+        
         <p class="text-center">Copyright &#169; 2025 Duarte Thomas. All Rights Reserved.</p>
       </div>
     </footer>
@@ -967,6 +1245,599 @@
         </div>
       </div>
     </div>
+
+    <div
+      id="modal-alisales"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalAlisales()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          AliSales — Application Web Monolithique
+        </h2>
+
+        <!-- Galerie de 2 images -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/alisales1.png"
+              alt="Interface Clients"
+              class="w-full max-w-md h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Interface “Clients”</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/alisales2.png"
+              alt="Méthode Show du ClientController"
+              class="w-full max-w-md h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Extrait méthode Show du ClientController</p>
+          </div>
+        </div>
+
+        <!-- Période -->
+        <p class="text-gray-700">
+          <strong>Période :</strong> 09/09/2024 – 04/05/2025
+        </p>
+
+        <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétences :</strong> Travailler en mode projet
+        </p>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Conception et modélisation de l'application de gestion des ventes</li>
+            <li>Développement frontend avec introduction à JavaScript et React</li>
+            <li>Développement backend et gestion des données</li>
+            <li>Implémentation de l'architecture monolithique</li>
+            <li>Tests unitaires et fonctionnels</li>
+            <li>Déploiement et documentation de l'application</li>
+            <li>Utilisation de frameworks et application des bonnes pratiques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-aliapi"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalAliapi()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          AliAPI — Service Web API REST
+        </h2>
+
+        <!-- Galerie de 3 images avec captions -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/aliapi1.png"
+              alt="AliAPI Endpoints"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Endpoints</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/aliapi2.png"
+              alt="AliAPI Documentation Swagger"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Documentation (Swagger)</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/aliapi3.png"
+              alt="Arborescence de dossiers AliAPI"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Arborescence</p>
+          </div>
+        </div>
+
+        <!-- Période -->
+        <p class="text-gray-700">
+          <strong>Période :</strong> 09/09/2024 – 04/05/2025
+        </p>
+
+        <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétences :</strong><br>
+          • Travailler en mode projet<br>
+          • Mettre à disposition des utilisateurs un service informatique
+        </p>
+
+        <!-- Description détaillée -->
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Conception et modélisation de l'API REST</li>
+            <li>Développement des endpoints et ressources</li>
+            <li>Implémentation des méthodes HTTP (GET, POST, PUT, DELETE)</li>
+            <li>Gestion de l'authentification et des autorisations</li>
+            <li>Documentation de l'API avec Swagger</li>
+            <li>Tests d'intégration et de performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-givemesomeapi"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalGiveMeSome()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          GiveMeSome API — Backend & Database Programming
+        </h2>
+
+        <!-- Galerie de 3 images -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Documentation 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/givemesomeapi1.png"
+              alt="Documentation GiveMeSome API 1"
+              class="w-full max-w-xs h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Documentation</p>
+          </div>
+          <!-- Documentation 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/givemesomeapi2.png"
+              alt="Exemple Documentation GiveMeSome API"
+              class="w-full max-w-xs h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Exemple Documentation</p>
+          </div>
+          <!-- Endpoints -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/givemesomeapi3.png"
+              alt="Endpoints GiveMeSome API"
+              class="w-full max-w-xs h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Endpoints</p>
+          </div>
+        </div>
+
+        <!-- Période -->
+        <p class="text-gray-700">
+          <strong>Période :</strong> 10/03/2025 – 23/03/2025
+        </p>
+
+        <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétences :</strong> Mettre à disposition des utilisateurs un service informatique
+        </p>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Analyse des besoins et conception de la base de données</li>
+            <li>Création et gestion de bases de données</li>
+            <li>Implémentation de procédures stockées</li>
+            <li>Modélisation MCD et conversion en MLD</li>
+            <li>Développement des fonctionnalités d'API avec programmation SQL avancée</li>
+            <li>Tests et optimisation des performances</li>
+            <li>Documentation technique de l'API et de la base de données</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      id="modal-preservation"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalPreservation()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Préservation de l'identité numérique de l'organisation
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-2 text-center">
+          <p><strong>Période :</strong> 10/2024 – 11/2024</p>
+          <p><strong>Compétences :</strong> Mettre à disposition des utilisateurs un service informatique</p>
+        </div>
+
+        <!-- Galerie d’images voyantes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Preservation1.png"
+              alt="Analyse simulation empoisonnement DNS"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Analyse simulation d'empoisonnement DNS</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Preservation2.png"
+              alt="Configuration du chiffrement des emails"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Configuration du chiffrement des emails</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Preservation3.png"
+              alt="Extrait documentation procédures de sécurité"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Extrait de la documentation des procédures de sécurité</p>
+          </div>
+        </div>
+
+        <!-- Description détaillée -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            Mise en place de moyens de preuves sécurisés conformes à la législation. Sécurisation des communications électroniques. Configuration et déploiement du chiffrement des emails. Simulation et analyse d'un empoisonnement de serveur DNS. Documentation des procédures de sécurité. Formation des utilisateurs aux bonnes pratiques.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-protection"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-3xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalProtection()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Protection des Données
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 09/2024 – 10/2024</p>
+          <p><strong>Compétences :</strong> Analyse et mise en conformité RGPD</p>
+        </div>
+
+        <!-- Galerie de 2 images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Protection1.png"
+              alt="Registre des traitements créé"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Registre des traitements créé</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Protection2.png"
+              alt="Tableau des procédures"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Tableau des procédures</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Analyse et mise en conformité RGPD pour CentreCall, incluant la création d'un registre des traitements. Documentation des procédures de conformité.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-securisation"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalSecurisation()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Sécurisation Équipements
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 11/2024 – 12/2024</p>
+          <p>
+            <strong>Compétences :</strong>
+            Mise en place de KeePass, analyse de la force des mots de passe et sensibilisation à la sécurité
+          </p>
+        </div>
+
+        <!-- Galerie d’images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securisation1.png"
+              alt="Exemple interface KeePass"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Exemple interface KeePass</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securisation2.png"
+              alt="Analyse de la robustesse des mots de passe"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Robustesse mot de passe</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securisation3.png"
+              alt="Sensibilisation à la sécurité"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Sensibilisation à la sécurité</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            Mise en place de KeePass, analyse des mots de passe pour assurer leur robustesse et sensibilisation à la sécurité auprès des utilisateurs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-securisation-web"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalSecurisationWeb()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Sécurisation Web
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 12/2024 – 01/2025</p>
+          <p><strong>Compétences :</strong> Audit de sécurité, identification et correction des vulnérabilités selon les standards OWASP</p>
+        </div>
+
+        <!-- Galerie de 2 images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securisationweb1.png"
+              alt="Liste de vulnérabilités identifiées"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Liste de vulnérabilités identifiées</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securisationweb2.png"
+              alt="Rapport d'audit de sécurité"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Rapport d'audit de sécurité</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Audit de sécurité pour identifier et corriger les vulnérabilités selon les standards OWASP.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-securite-app"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalSecuriteApp()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Sécurité Applicative
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 01/2025 – 03/2025</p>
+          <p><strong>Compétences :</strong> Implémentation de mécanismes de chiffrement, authentification sécurisée et principes de Security by Design</p>
+        </div>
+
+        <!-- Galerie de 2 images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securitéapp1.png"
+              alt="Authentification applicative sécurisée"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Authentification applicative</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/Securitéapp2.png"
+              alt="Mécanisme de chiffrement"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Mécanisme de chiffrement</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Mise en place de solutions de sécurité applicative pour protéger les données et assurer la conformité, tout en respectant les meilleures pratiques en matière de sécurité dès la conception.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-redirige-rcm"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalRedirigieRcm()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Refonte intranet
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 27/2024 – 27/2024</p>
+          <p><strong>Compétences :</strong> Adaptation d’un site existant aux évolutions de PHP en assurant la compatibilité avec les versions récentes du langage, avec les demandes des employés.</p>
+        </div>
+
+        <!-- Galerie de 2 images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/rcm1.jpg"
+              alt="Authentification applicative sécurisée"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Ancien Intranet</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/rcm2.jpg"
+              alt="Mécanisme de chiffrement"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Nouveau Intranet</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-refont-rcm"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalRefontRcm()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Refonte Portail de données RCM
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 01/2025 - 02/2025</p>
+          <p><strong>Compétences :</strong> Adaptation d’un site existant aux évolutions de PHP et de MySQL en assurant la compatibilité avec les versions récentes du langage, avec les demandes des employés.</p>
+        </div>
+
+        <!-- Galerie de 2 images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/rcmrefont1.jpg"
+              alt="Authentification applicative sécurisée"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Nouveau Portail de données</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/rcmrefont2.jpg"
+              alt="Mécanisme de chiffrement"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Partie Administration</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP et de MySQL, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
    
 
     
@@ -1022,7 +1893,7 @@
       }
       function closeModalUvdesk() {
         document.getElementById('modal-uvdesk').classList.add('hidden');
-        document.body.style.overflow = '';
+        document.body.style.overflow = 'hidden';
       }
       function openModalAlimarket() {
         document.getElementById('modal-alimarket').classList.remove('hidden');
@@ -1030,7 +1901,7 @@
       }
       function closeModalAlimarket() {
         document.getElementById('modal-alimarket').classList.add('hidden');
-        document.body.style.overflow = '';
+        document.body.style.overflow = 'hidden';
       }
       function openModalAlipurchase() {
         document.getElementById('modal-alipurchase').classList.remove('hidden');
@@ -1038,8 +1909,112 @@
       }
       function closeModalAlipurchase() {
         document.getElementById('modal-alipurchase').classList.add('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function openModalAlisales() {
+        document.getElementById('modal-alisales').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal AliSales
+      function closeModalAlisales() {
+        document.getElementById('modal-alisales').classList.add('hidden');
         document.body.style.overflow = '';
       }
+      function openModalAliapi() {
+        document.getElementById('modal-aliapi').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal AliAPI
+      function closeModalAliapi() {
+        document.getElementById('modal-aliapi').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalGiveMeSome() {
+        document.getElementById('modal-givemesomeapi').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal GiveMeSome API
+      function closeModalGiveMeSome() {
+        document.getElementById('modal-givemesomeapi').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalPreservation() {
+        document.getElementById('modal-preservation').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Préservation
+      function closeModalPreservation() {
+        document.getElementById('modal-preservation').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalProtection() {
+        document.getElementById('modal-protection').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Protection des Données
+      function closeModalProtection() {
+        document.getElementById('modal-protection').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function openModalSecurisation() {
+        document.getElementById('modal-securisation').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurisation Équipements
+      function closeModalSecurisation() {
+        document.getElementById('modal-securisation').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalSecurisationWeb() {
+        document.getElementById('modal-securisation-web').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurisation Web
+      function closeModalSecurisationWeb() {
+        document.getElementById('modal-securisation-web').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function openModalSecuriteApp() {
+        document.getElementById('modal-securite-app').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalSecuriteApp() {
+        document.getElementById('modal-securite-app').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalRedirigeRcm() {
+        document.getElementById('modal-redirige-rcm').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalRedirigieRcm() {
+        document.getElementById('modal-redirige-rcm').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function openModalRefontRcm() {
+        document.getElementById('modal-refont-rcm').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalRefontRcm() {
+        document.getElementById('modal-refont-rcm').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
 
       window.addEventListener('click', e => {
         const m2l    = document.getElementById('modal-m2l');
@@ -1049,6 +2024,8 @@
         const uvdesk  = document.getElementById('modal-uvdesk');
         const alimarket  = document.getElementById('modal-alimarket');
         const alipurchase  = document.getElementById('modal-alipurchase');
+        const alisales  = document.getElementById('modal-alisales');
+        
 
 
         
@@ -1057,8 +2034,22 @@
         if (e.target === chu)   closeModalChu();
         if (e.target.id === 'modal-glpi') closeModalGlpi();
         if (e.target.id === 'modal-uvdesk') closeModalUvdesk();
-        if (e.target.id === 'modal-alimarket') closeModalAli();
+        if (e.target.id === 'modal-alimarket') closeModalAlimarket();
         if (e.target.id === 'modal-alipurchase') closeModalAlipurchase();
+        if (e.target.id === 'modal-alisales') closeModalAlisales();
+        if (e.target.id === 'modal-aliapi') closeModalAliapi();
+        if (e.target.id === 'modal-givemesomeapi') closeModalGiveMeSome();
+        if (e.target.id === 'modal-preservation') closeModalPreservation();
+        if (e.target.id === 'modal-protection') closeModalProtection();
+        if (e.target.id === 'modal-securisation') closeModalSecurisation();
+        if (e.target.id === 'modal-securisation-web') closeModalSecurisationWeb();
+        if (e.target.id === 'modal-securite-app') closeModalSecuriteApp();
+        if (e.target.id === 'modal-redirige-rcm') closeModalRedirigieRcm();
+        if (e.target.id === 'modal-refont-rcm') closeModalRedirigieRcm();
+
+
+        
+        
 
 
 
