@@ -1,77 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#555',
-              secondary: '#147efb',
-              light: '#f9f9f9',
-              dark: '#333'
-            }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon principal (format .ico) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Favicon PNG 32×32 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <!-- Favicon PNG 16×16 -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Icône Apple Touch (iOS) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <title>Duarte Thomas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#555',
+            secondary: '#147efb',
+            light: '#f9f9f9',
+            dark: '#333'
           }
         }
       }
-    </script>
-  </head>
+    }
+  </script>
+</head>
   <body class="bg-white text-dark">
     <!-- Desktop Navigation -->
-    <nav id="desktop-nav" class="hidden md:flex justify-between items-center py-4 px-12">
-      <div class="text-xl font-bold">Duarte Thomas</div>
-      <div>
-        <ul class="flex gap-8">
-  <li>
-    <a href="#about"
-       class="relative text-current transition-colors duration-300
-              hover:text-black
-              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
-              after:h-[2px] after:w-0 after:bg-black
-              after:transition-all after:duration-300 hover:after:w-full">
-      A propos
-    </a>
-  </li>
-  <li>
-    <a href="#experience"
-       class="relative text-current transition-colors duration-300
-              hover:text-black
-              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
-              after:h-[2px] after:w-0 after:bg-black
-              after:transition-all after:duration-300 hover:after:w-full">
-      Expérience
-    </a>
-  </li>
-  <li>
-    <a href="#projects"
-       class="relative text-current transition-colors duration-300
-              hover:text-black
-              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
-              after:h-[2px] after:w-0 after:bg-black
-              after:transition-all after:duration-300 hover:after:w-full">
-      Projets
-    </a>
-  </li>
-  <li>
-    <a href="#contact"
-       class="relative text-current transition-colors duration-300
-              hover:text-black
-              after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
-              after:h-[2px] after:w-0 after:bg-black
-              after:transition-all after:duration-300 hover:after:w-full">
-      Contact
-    </a>
-  </li>
-</ul>
-
-
-      </div>
-    </nav>
+    <nav
+  id="desktop-nav"
+  class="fixed top-0 left-0 w-full z-50 md:flex justify-between items-center py-4 px-12 "
+>
+  <div class="text-xl font-bold">Duarte Thomas</div>
+  <div>
+    <ul class="flex gap-8">
+      <li>
+        <a
+          href="#about"
+          class="relative text-current transition-colors duration-300 hover:text-black
+                 after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+                 after:h-[2px] after:w-0 after:bg-black
+                 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          A propos
+        </a>
+      </li>
+      <li>
+        <a
+          href="#experience"
+          class="relative text-current transition-colors duration-300 hover:text-black
+                 after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+                 after:h-[2px] after:w-0 after:bg-black
+                 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Expérience
+        </a>
+      </li>
+      <li>
+        <a
+          href="#projects"
+          class="relative text-current transition-colors duration-300 hover:text-black
+                 after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+                 after:h-[2px] after:w-0 after:bg-black
+                 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Projets
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class="relative text-current transition-colors duration-300 hover:text-black
+                 after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+                 after:h-[2px] after:w-0 after:bg-black
+                 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
     
     <!-- Mobile Navigation -->
     <nav id="hamburger-nav" class="flex md:hidden justify-between items-center py-4 px-8">
@@ -305,7 +323,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">Node JS</h3>
+                  <h3 class="font-bold text-gray-800">Next JS</h3>
                   <p class="text-gray-600 font-medium">Basique</p>
                 </div>
               </div>
@@ -353,7 +371,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">Git</h3>
+                  <h3 class="font-bold text-gray-800">MySQL</h3>
                   <p class="text-gray-600 font-medium">Intermédiaire</p>
                 </div>
               </div>
@@ -370,51 +388,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
 
-           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalRedirigeRcm()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/rcm.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Refont Intranet RCM</h2>
-              <p class="mb-4 text-gray-600">Refonte complète de l'intranet de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
-              <div class="flex flex-wrap gap-2">
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalRedirigeRcm()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalRefontRcm()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/rcmrefont.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Refont Portail de données RCM</h2>
-              <p class="mb-4 text-gray-600">Refonte complète du portail de données de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
-              <div class="flex flex-wrap gap-2">
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalRefontRcm()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
+           
 
           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
           onclick="openModalGestsup()"
@@ -430,16 +404,58 @@
               <h2 class="text-xl font-semibold mb-2">GestSup</h2>
               <p class="mb-4 text-gray-600">GestSup est un service de ticketing qui permet de gérer et suivre les demandes ou incidents des utilisateurs.</p>
               <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-              
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
                   onclick="openModalGestsup()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalUvdesk()"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/uvdesk.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">UvDesk</h2>
+              <p class="mb-4 text-gray-600">UVdesk est une plateforme de support client open-source qui centralise, automatise et suit toutes les demandes clients sous forme de tickets.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalUvdesk()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalGlpi()"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/glpi.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">GLPI</h2>
+              <p class="mb-4 text-gray-600">Mise en place d'une solution de gestion de parc informatique (GLPI)</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalGlpi()"
                 >
                   Voir Plus
                 </button>
@@ -462,13 +478,6 @@
               <h2 class="text-xl font-semibold mb-2">Glide Apps</h2>
               <p class="mb-4 text-gray-600">Analyse des besoins du CHU. Conception et développement d'une application no-code avec GlideApps.</p>
               <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-               
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
                   onclick="openModalChu()"
@@ -478,53 +487,18 @@
               </div>
             </div>
           </div>
-
-
           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalGlpi()"
-          >
-            <div class="h-48 overflow-hidden">
+          onclick="openModalAlisales()"
+          >              <div class="h-48 overflow-hidden">
               <img
-                src="./assets/glpi.png"
+                src="./assets/alisales.png"
                 alt="Project 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">GLPI</h2>
-              <p class="mb-4 text-gray-600">Mise en place d'une solution de gestion de parc informatique (GLPI)</p>
-              <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-               
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalGlpi()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalUvdesk()"
-          >
-            <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/uvdesk.webp"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">UvDesk</h2>
-              <p class="mb-4 text-gray-600">Répondre aux incidents et aux demandes d’assistance et d’évolution, Gérer le patrimoine informatique</p>
+              <h2 class="text-xl font-semibold mb-2">AliSales</h2>
+              <p class="mb-4 text-gray-600">Développement d'une application desktop monolithique</p>
               <div class="flex flex-wrap gap-2">
                 <button
                   class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
@@ -533,10 +507,10 @@
                   Github
                 </button>
               
-
+            
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalUvdesk()"
+                  onclick="openModalAlisales()"
                 >
                   Voir Plus
                 </button>
@@ -544,6 +518,100 @@
             </div>
           </div>
 
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalAliinventory()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/aliinventory.jpeg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">AliInventory</h2>
+              <p class="mb-4 text-gray-600">Développement d'une application mobile headless</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+                  onclick="location.href='https://github.com/Duarte48'"
+                >
+                  Github
+                </button>
+          
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalAliinventory()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalAlipurchase()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/alipurchase.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">AliPurchase</h2>
+              <p class="mb-4 text-gray-600">Développement d'une application desktop headless</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+                  onclick="location.href='https://github.com/Duarte48'"
+                >
+                  Github
+                </button>
+              
+            
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalAlimarket()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalAliapi()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/aliapi.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">AliApi</h2>
+              <p class="mb-4 text-gray-600">Développement d’un service web API REST</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
+                  onclick="location.href='https://github.com/Duarte48'"
+                >
+                  Github
+                </button>
+              
+            
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalAliapi()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          
 
           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
           onclick="openModalAlimarket()"
@@ -577,99 +645,11 @@
           </div>
 
           
-          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalAlipurchase()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/alipurchase.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">AliPurchase</h2>
-              <p class="mb-4 text-gray-600">Développement d'une application desktop headless</p>
-              <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-              
-            
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalAlimarket()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalAlisales()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/alisales.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">AliSales</h2>
-              <p class="mb-4 text-gray-600">Développement d'une application desktop monolithique</p>
-              <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-              
-            
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalAlisales()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
+          
+          
 
 
-          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalAliapi()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/aliapi.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">AliApi</h2>
-              <p class="mb-4 text-gray-600">Développement d’une API REST</p>
-              <div class="flex flex-wrap gap-2">
-                <button
-                  class="px-3 py-1 border-2 border-gray-700 text-gray-700 font-medium rounded hover:bg-gray-200 transition-colors text-sm"
-                  onclick="location.href='https://github.com/Duarte48'"
-                >
-                  Github
-                </button>
-              
-            
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalAliapi()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
+         
 
 
 
@@ -726,24 +706,153 @@
               </div>
             </div>
           </div>
-
-
-           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalProtection()"
+            <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalLepathie()"
           >              <div class="h-48 overflow-hidden">
               <img
-                src="./assets/Protection.jpg"
+                src="./assets/lepathie.webp"
                 alt="Project 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Protection des Données</h2>
-              <p class="mb-4 text-gray-600">Analyse et mise en conformité RGPD pour CentreCall, incluant la création d'un registre des traitements.</p>
+              <h2 class="text-xl font-semibold mb-2">Lepathie</h2>
+              <p class="mb-4 text-gray-600">Mise en place d'une application web pour la gestion d'une flotte de véhicules</p>
               <div class="flex flex-wrap gap-2">
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalProtectionn()"
+                  onclick="openModalLepathie()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+          
+
+
+         <!--
+<div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+     onclick="openModalProtection()">
+  <div class="h-48 overflow-hidden">
+    <img
+      src="./assets/Protection.jpg"
+      alt="Project 1"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Protection des Données</h2>
+    <p class="mb-4 text-gray-600">
+      Analyse et mise en conformité RGPD pour CentreCall, incluant la création
+      d'un registre des traitements.
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+        onclick="openModalProtectionn()"
+      >
+        Voir Plus
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+     onclick="openModalSecurisation()">
+  <div class="h-48 overflow-hidden">
+    <img
+      src="./assets/Secursiation.jpg"
+      alt="Project 1"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Sécurisation des équipements</h2>
+    <p class="mb-4 text-gray-600">
+      Mise en place de KeePass, analyse de la force des mots de passe et
+      sensibilisation à la sécurité
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+        onclick="openModalSecurisation()"
+      >
+        Voir Plus
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+     onclick="openModalSecurisationWeb()">
+  <div class="h-48 overflow-hidden">
+    <img
+      src="./assets/Securisationweb.png"
+      alt="Project 1"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Sécurisation Web</h2>
+    <p class="mb-4 text-gray-600">
+      Audit de sécurité, identification et correction des vulnérabilités selon
+      les standards OWASP
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+        onclick="openModalSecurisationWeb()"
+      >
+        Voir Plus
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+     onclick="openModalSecuriteApp()">
+  <div class="h-48 overflow-hidden">
+    <img
+      src="./assets/Securitéapp.png"
+      alt="Project 1"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Sécurité Applicative</h2>
+    <p class="mb-4 text-gray-600">
+      Implémentation de mécanismes de chiffrement, authentification sécurisée et
+      principes de Securités
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+        onclick="openModalSecuriteApp()"
+      >
+        Voir Plus
+      </button>
+    </div>
+  </div>
+</div>
+-->
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalRedirigeRcm()"
+          >              <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/rcm.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">Refonte Intranet RCM</h2>
+              <p class="mb-4 text-gray-600">Refonte complète de l'intranet de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalRedirigeRcm()"
                 >
                   Voir Plus
                 </button>
@@ -751,68 +860,45 @@
             </div>
           </div>
 
-           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalSecurisation()"
+          
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalRefontRcm()"
           >              <div class="h-48 overflow-hidden">
               <img
-                src="./assets/Secursiation.jpg"
+                src="./assets/rcmrefont.png"
                 alt="Project 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Sécurisation des équipements</h2>
-              <p class="mb-4 text-gray-600">Mise en place de KeePass, analyse de la force des mots de passe et sensibilisation à la sécurité</p>
+              <h2 class="text-xl font-semibold mb-2">Refonte Portail de données RCM</h2>
+              <p class="mb-4 text-gray-600">Refonte complète du portail de données de RCM visant à moderniser le design, améliorer l'expérience utilisateur et optimiser les performances techniques.</p>
               <div class="flex flex-wrap gap-2">
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalSecurisation()"
+                  onclick="openModalRefontRcm()"
                 >
                   Voir Plus
                 </button>
               </div>
             </div>
           </div>
-
-           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalSecurisationWeb()"
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalPolygon()"
           >              <div class="h-48 overflow-hidden">
               <img
-                src="./assets/Securisationweb.png"
+                src="./assets/polygon.jpeg"
                 alt="Project 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Sécurisation Web</h2>
-              <p class="mb-4 text-gray-600">Audit de sécurité, identification et correction des vulnérabilités selon les standards OWASP</p>
+              <h2 class="text-xl font-semibold mb-2">Polygon</h2>
+              <p class="mb-4 text-gray-600">Mise en place d'une application web servant de base pour une plateforme de jeu vidéo</p>
               <div class="flex flex-wrap gap-2">
                 <button 
                   class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalSecurisationWeb()"
-                >
-                  Voir Plus
-                </button>
-              </div>
-            </div>
-          </div>
-
-           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
-          onclick="openModalSecuriteApp()"
-          >              <div class="h-48 overflow-hidden">
-              <img
-                src="./assets/Securitéapp.png"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h2 class="text-xl font-semibold mb-2">Sécurité Applicative</h2>
-              <p class="mb-4 text-gray-600"> Implémentation de mécanismes de chiffrement, authentification sécurisée et principes de Securités</p>
-              <div class="flex flex-wrap gap-2">
-                <button 
-                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
-                  onclick="openModalSecuriteApp()"
+                  onclick="openModalPolygon()"
                 >
                   Voir Plus
                 </button>
@@ -910,26 +996,34 @@
           
           <!-- Texte & liste -->
           <p class="text-gray-700"><strong>Période :</strong> 06/09/2024 – 27/09/2024</p>
-          <p class="text-gray-700">Mise en place de GestSup v3.2.50 sur Debian 12 : réseau IP fixe, HTTPS/SSL, plugin Kanban, et UI personnalisée.</p>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Installation GestSup v3.2.50 (Linux Debian 12)</li>
-            <li>Configuration réseau en IP fixe</li>
-            <li>HTTPS/SSL via Apache2</li>
-            <li>Personnalisation UI (logo, photos)</li>
-            <li>Plugin Kanban paramétré</li>
-          </ul>
-          
-          <!-- Compétences -->
-          <div>
-            <h3 class="font-semibold mb-2">Compétences mobilisées :</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Administration Linux</span>
-              <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Apache2</span>
-              <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Sécurité HTTPS/SSL</span>
-              <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Personnalisation UI</span>
-              <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">GestSup</span>
-            </div>
+         
+          <p class="text-gray-700"></p>
+          <div class="text-gray-700 space-y-2">
+            <p><strong>Description : </strong><br>
+              Mise en place de GestSup v3.2.50 sur Debian 12 : réseau IP fixe, HTTPS/SSL, plugin Kanban, et UI personnalisée.</p>
+            <ul class="list-disc list-inside">
+              <li>Installation GestSup v3.2.50 (Linux Debian 12)</li>
+              <li>Configuration réseau en IP fixe</li>
+              <li>HTTPS/SSL via Apache2</li>
+              <li>Personnalisation UI (logo, photos)</li>
+              <li>Plugin Kanban paramétré</li>
+            </ul>
           </div>
+           <p class="text-gray-700">
+            <strong>Compétences :</strong><br>
+            • Gérer le patrimoine informatique<br>
+            • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+            • Mettre à disposition des utilisateurs un service informatique
+          </p>
+
+        
+        
+          
+
+
+
+          <!-- Description détaillée -->
+       
     
         </div>
       </div>
@@ -984,9 +1078,20 @@
           <div class="space-y-4 text-gray-700">
             <p><strong>Période :</strong> 07/03/2025 – 04/04/2025</p>
             <p>Développement d'une solution de formation à la cybersécurité pour le CHU de Rennes.</p>
-            <p><strong>Compétences :</strong> Mettre à disposition des utilisateurs un service informatique</p>
-            <p><strong>Description :</strong> Analyse des besoins du CHU. Conception et développement d'une application no-code avec GlideApps. Intégration de ressources pédagogiques. Mise en place d'un parcours d'auto-formation. Création d'évaluations et quizz. Documentation de l'application.</p>
-          </div>
+            <p class="text-gray-700">
+              <ul class="list-disc list-inside text-gray-700">
+            <li>Analyse des besoins du CHU concernant la formation à la cybersécurité</li>
+            <li>Conception et développement d'une application no-code avec GlideApps</li>
+            <li>Intégration de ressources pédagogiques sur la cybersécurité</li>
+            <li>Mise en place d'un parcours d'auto-formation pour le personnel</li>
+            <li>Création d'évaluations et quizz sur les bonnes pratiques de sécurité</li>
+            <li>Documentation de l'application et guides utilisateurs</li>
+
+          </ul>
+            <br><strong>Compétence :</strong><br>
+            • Organiser son développement professionnel
+          </p>          
+        </div>
         </div>
       </div>
     </div>
@@ -1039,11 +1144,7 @@
           </p>
 
           <!-- Compétences -->
-          <p class="text-gray-700">
-            <strong>Compétences :</strong><br>
-            • Gérer le patrimoine informatique<br>
-            • Mettre à disposition des utilisateurs un service informatique
-          </p>
+          
 
           <!-- Description détaillée -->
           <div class="text-gray-700 space-y-2">
@@ -1060,6 +1161,11 @@
               <li>Migration vers Debian 12 avec agent GLPI intégré</li>
             </ul>
           </div>
+          <p class="text-gray-700">
+            <strong>Compétences :</strong><br>
+            • Gérer le patrimoine informatique<br>
+            • Mettre à disposition des utilisateurs un service informatique
+          </p>
         </div>
       </div>
     </div>
@@ -1095,11 +1201,7 @@
           </p>
 
           <!-- Compétences -->
-          <p class="text-gray-700">
-            <strong>Compétences :</strong><br>
-            • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
-            • Gérer le patrimoine informatique
-          </p>
+          
 
           <!-- Description détaillée -->
           <div class="text-gray-700 space-y-2">
@@ -1115,6 +1217,11 @@
               <li>Documentation de la procédure d'installation et d'utilisation</li>
             </ul>
           </div>
+          <p class="text-gray-700">
+            <strong>Compétences :</strong><br>
+            • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+            • Développer la présence en ligne de l’organisation
+          </p>
         </div>
       </div>
     </div>
@@ -1164,9 +1271,7 @@
         </p>
 
         <!-- Compétences -->
-        <p class="text-gray-700">
-          <strong>Compétences :</strong> Travailler en mode projet
-        </p>
+        
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
@@ -1180,6 +1285,10 @@
             <li>Documentation utilisateur et technique</li>
           </ul>
         </div>
+        <p class="text-gray-700">
+          <strong>Compétence :</strong><br>
+           • Travailler en mode projet
+        </p>
       </div>
     </div>
 
@@ -1227,9 +1336,7 @@
           <strong>Période :</strong> 09/09/2024 – 04/05/2025
         </p>
 
-        <p class="text-gray-700">
-          <strong>Compétences :</strong> Travailler en mode projet
-        </p>
+      
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
@@ -1243,6 +1350,10 @@
             <li>Documentation et déploiement</li>
           </ul>
         </div>
+          <p class="text-gray-700">
+          <strong>Compétence :</strong><br>
+           • Travailler en mode projet
+        </p>
       </div>
     </div>
 
@@ -1289,10 +1400,7 @@
           <strong>Période :</strong> 09/09/2024 – 04/05/2025
         </p>
 
-        <!-- Compétences -->
-        <p class="text-gray-700">
-          <strong>Compétences :</strong> Travailler en mode projet
-        </p>
+       
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
@@ -1307,6 +1415,96 @@
             <li>Utilisation de frameworks et application des bonnes pratiques</li>
           </ul>
         </div>
+         <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétence :</strong><br>
+          • Travailler en mode projet
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal-aliinventory"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalAliinventory()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          AliInventory — Application mobile headless
+        </h2>
+        <p class="text-gray-700">
+          <strong>Période :</strong> 09/09/2024 – 04/05/2025
+        </p>
+
+       
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Conception de l'interface utilisateur mobile</li>
+            <li>Développement de l'application avec architecture headless</li>
+            <li>Mise en place de la connexion à l'API</li>
+            <li>Implémentation des fonctionnalités de gestion d'inventaire</li>
+            <li>Tests sur différents dispositifs mobiles</li>
+            <li>Documentation technique et guide utilisateur</li>
+          </ul>
+        </div>
+         <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétence :</strong><br>
+          • Travailler en mode projet
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal-lepathie"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalLepathie()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Lepathie - Application web pour la gestion d'une flotte de véhicules
+        </h2>
+        <p class="text-gray-700">
+          <strong>Période :</strong> 08/01/2024 - 12/01/2024
+        </p>
+
+       
+
+        <!-- Description -->
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Développement d'une application web sécurisée (Lepathie)</li>
+            <li>Analyse des besoins et création d'une maquette fonctionnelle en 4 jours</li>
+            <li>Implémentation d'un système de gestion de flotte de véhicules</li>
+            <li>Développement de fonctionnalités spécifiques pour 3 types d'utilisateurs les employés d’un service, le responsable d’un service, la direction.)</li>
+            <li>Mise en place d'un système d'inscription et de réservation de visites avec gestion des contraintes.</li>
+            <li>Configuration d'un tableau de bord avec les véhicules</li>
+            <li>Génération de documents PDF exportables pour les véhicules</li>
+            <li>Utilisation du framework WebArt et implémentation en architecture MVC</li>
+            <li>Création d'une vidéo commerciale en anglais pour présenter l'application</li>
+          </ul>
+        </div>
+         <!-- Compétences -->
+        <p class="text-gray-700">
+          <strong>Compétences :</strong><br>
+          • Développer la présence en ligne de l’organisation<br>
+          • Travailler en mode projet<br>
+          • Mettre à disposition des utilisateurs un service informatique<br>
+        </p>
       </div>
     </div>
     <div
@@ -1359,11 +1557,7 @@
         </p>
 
         <!-- Compétences -->
-        <p class="text-gray-700">
-          <strong>Compétences :</strong><br>
-          • Travailler en mode projet<br>
-          • Mettre à disposition des utilisateurs un service informatique
-        </p>
+        
 
         <!-- Description détaillée -->
         <div class="text-gray-700 space-y-2">
@@ -1377,6 +1571,11 @@
             <li>Tests d'intégration et de performance</li>
           </ul>
         </div>
+        <p class="text-gray-700">
+          <strong>Compétences :</strong><br>
+          • Travailler en mode projet<br>
+          • Organiser son développement professionnel
+        </p>
       </div>
     </div>
     <div
@@ -1432,9 +1631,7 @@
         </p>
 
         <!-- Compétences -->
-        <p class="text-gray-700">
-          <strong>Compétences :</strong> Mettre à disposition des utilisateurs un service informatique
-        </p>
+        
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
@@ -1449,6 +1646,10 @@
             <li>Documentation technique de l'API et de la base de données</li>
           </ul>
         </div>
+        <p class="text-gray-700">
+          <strong>Compétence :</strong> <br>
+          • Organiser son développement professionnel
+        </p>
       </div>
     </div>
 
@@ -1472,7 +1673,6 @@
         <!-- Période & Compétences -->
         <div class="text-gray-700 space-y-2 text-center">
           <p><strong>Période :</strong> 10/2024 – 11/2024</p>
-          <p><strong>Compétences :</strong> Mettre à disposition des utilisateurs un service informatique</p>
         </div>
 
         <!-- Galerie d’images voyantes -->
@@ -1506,12 +1706,20 @@
           </div>
         </div>
 
-        <!-- Description détaillée -->
-        <div class="text-gray-700 space-y-4">
-          <p>
-            Mise en place de moyens de preuves sécurisés conformes à la législation. Sécurisation des communications électroniques. Configuration et déploiement du chiffrement des emails. Simulation et analyse d'un empoisonnement de serveur DNS. Documentation des procédures de sécurité. Formation des utilisateurs aux bonnes pratiques.
-          </p>
+
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Description :</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Mise en place de moyens de preuves sécurisés conformes à la législation</li>
+            <li>Sécurisation des communications électroniques</li>
+            <li>Configuration et déploiement du chiffrement des emails</li>
+            <li>Simulation et analyse d'un empoisonnement de serveur DNS</li>
+            <li>Documentation des procédures de sécurité</li>
+            <li>Formation des utilisateurs aux bonnes pratiques</li>
+          </ul>
         </div>
+          <p><strong>Compétence :</strong><br>
+             • Organiser son développement professionnel</p>
       </div>
     </div>
 
@@ -1745,13 +1953,12 @@
 
         <!-- Titre -->
         <h2 class="text-2xl text-center font-bold mb-4">
-          Refonte intranet
+          Refonte intranet RCM
         </h2>
 
         <!-- Période & Compétences -->
         <div class="text-gray-700 space-y-1 text-center mb-6">
-          <p><strong>Période :</strong> 27/2024 – 27/2024</p>
-          <p><strong>Compétences :</strong> Adaptation d’un site existant aux évolutions de PHP en assurant la compatibilité avec les versions récentes du langage, avec les demandes des employés.</p>
+          <p><strong>Période :</strong> 06/01/2025 - 14/02/2025</p>
         </div>
 
         <!-- Galerie de 2 images avec légendes -->
@@ -1779,6 +1986,14 @@
           <p>
             <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
           </p>
+          <p><strong>Compétences :</strong><br>
+             • Gérer le patrimoine informatique<br>
+             • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+             • Développer la présence en ligne de l’organisation<br>
+             • Travailler en mode projet<br>
+             • Mettre à disposition des utilisateurs un service informatique<br>
+             • Organiser son développement professionnel<br>
+            </p>
         </div>
       </div>
     </div>
@@ -1801,8 +2016,7 @@
 
         <!-- Période & Compétences -->
         <div class="text-gray-700 space-y-1 text-center mb-6">
-          <p><strong>Période :</strong> 01/2025 - 02/2025</p>
-          <p><strong>Compétences :</strong> Adaptation d’un site existant aux évolutions de PHP et de MySQL en assurant la compatibilité avec les versions récentes du langage, avec les demandes des employés.</p>
+          <p><strong>Période :</strong> 27/05/2024 - 27/06/2024</p>
         </div>
 
         <!-- Galerie de 2 images avec légendes -->
@@ -1830,7 +2044,83 @@
           <p>
             <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP et de MySQL, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
           </p>
+          <p><strong>Compétences :</strong><br>
+             • Gérer le patrimoine informatique<br>
+             • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+             • Développer la présence en ligne de l’organisation<br>
+             • Travailler en mode projet<br>
+             • Mettre à disposition des utilisateurs un service informatique<br>
+             • Organiser son développement professionnel<br>
+            </p>
         </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-polygon"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalPolygon()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Projet Polygon 
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 20/05/2025 - 25/05/2025</p>
+          
+        </div>
+
+        <!-- Galerie d’images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/polygon3.png"
+              alt="Exemple interface KeePass"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Inventaire d'armes</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/polygon2.png"
+              alt="Analyse de la robustesse des mots de passe"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Inventaire de vêtements</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/polygon1.png"
+              alt="Sensibilisation à la sécurité"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Choix de classe</p>
+          </div>
+        </div>
+
+        <div class="text-gray-700 space-y-4">
+          <p>
+            <strong>Description :</strong> Polygon UI est une interface utilisateur développée avec Next.js et TailwindCSS, servant de base pour une plateforme de jeu
+          </p>
+          <p><strong>Compétences :</strong><br>
+             • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+             • Travailler en mode projet<br>
+             • Organiser son développement professionnel<br>
+            </p>
+        </div>
+        <!-- Description -->
+       
       </div>
     </div>
 
@@ -1893,7 +2183,7 @@
       }
       function closeModalUvdesk() {
         document.getElementById('modal-uvdesk').classList.add('hidden');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = '';
       }
       function openModalAlimarket() {
         document.getElementById('modal-alimarket').classList.remove('hidden');
@@ -1901,7 +2191,7 @@
       }
       function closeModalAlimarket() {
         document.getElementById('modal-alimarket').classList.add('hidden');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = '';
       }
       function openModalAlipurchase() {
         document.getElementById('modal-alipurchase').classList.remove('hidden');
@@ -1909,16 +2199,24 @@
       }
       function closeModalAlipurchase() {
         document.getElementById('modal-alipurchase').classList.add('hidden');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = '';
       }
       function openModalAlisales() {
         document.getElementById('modal-alisales').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       }
 
-      // Ferme le modal AliSales
       function closeModalAlisales() {
         document.getElementById('modal-alisales').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalAliinventory() {
+        document.getElementById('modal-aliinventory').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModalAliinventory() {
+        document.getElementById('modal-aliinventory').classList.add('hidden');
         document.body.style.overflow = '';
       }
       function openModalAliapi() {
@@ -2014,6 +2312,26 @@
         document.getElementById('modal-refont-rcm').classList.add('hidden');
         document.body.style.overflow = '';
       }
+      function openModalLepathie() {
+        document.getElementById('modal-lepathie').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalLepathie() {
+        document.getElementById('modal-lepathie').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalPolygon() {
+        document.getElementById('modal-polygon').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalPolygon() {
+        document.getElementById('modal-polygon').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
 
 
       window.addEventListener('click', e => {
@@ -2034,10 +2352,11 @@
         if (e.target === chu)   closeModalChu();
         if (e.target.id === 'modal-glpi') closeModalGlpi();
         if (e.target.id === 'modal-uvdesk') closeModalUvdesk();
-        if (e.target.id === 'modal-alimarket') closeModalAlimarket();
         if (e.target.id === 'modal-alipurchase') closeModalAlipurchase();
         if (e.target.id === 'modal-alisales') closeModalAlisales();
+        if (e.target.id === 'modal-aliinventory') closeModalAliinventory();
         if (e.target.id === 'modal-aliapi') closeModalAliapi();
+        if (e.target.id === 'modal-alimarket') closeModalAlimarket();
         if (e.target.id === 'modal-givemesomeapi') closeModalGiveMeSome();
         if (e.target.id === 'modal-preservation') closeModalPreservation();
         if (e.target.id === 'modal-protection') closeModalProtection();
@@ -2045,7 +2364,11 @@
         if (e.target.id === 'modal-securisation-web') closeModalSecurisationWeb();
         if (e.target.id === 'modal-securite-app') closeModalSecuriteApp();
         if (e.target.id === 'modal-redirige-rcm') closeModalRedirigieRcm();
-        if (e.target.id === 'modal-refont-rcm') closeModalRedirigieRcm();
+        if (e.target.id === 'modal-refont-rcm') closeModalRefontRcm();
+        if (e.target.id === 'modal-lepathie') closeModalLepathie();
+        if (e.target.id === 'modal-polygon') closeModalPolygon();
+
+
 
 
         
