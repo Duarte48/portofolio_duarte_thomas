@@ -906,6 +906,30 @@
               </div>
             </div>
           </div>
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalSp1()"
+          >              
+          <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/sp1.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">SP1</h2>
+              <p class="mb-4 text-gray-600">Flowlift est une application multi-plateformes de gestion de salle de sport pour les coachs sportifs.</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalSp1()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+
     </section>
     
     <!-- Contact Section -->
@@ -1428,7 +1452,7 @@
       class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
     >
       <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
-        <!-- Bouton Fermer -->
+        
         <button
           class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
           onclick="closeModalAliinventory()"
@@ -1438,11 +1462,23 @@
         <h2 class="text-2xl text-center font-bold mb-4">
           AliInventory — Application mobile headless
         </h2>
-        <p class="text-gray-700">
+        
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/aliinventory.png"
+              alt="Interface Clients"
+              class="w-48 max-w-md h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Interface Produits</p>
+          </div> 
+               
+        </div>
+
+       <p class="text-gray-700">
           <strong>Période :</strong> 09/09/2024 – 04/05/2025
         </p>
-
-       
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
@@ -1486,9 +1522,9 @@
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
-          <p><strong>Description :</strong></p>
+          <p><strong>Description :</strong><br>
+          Elle permet d’attribuer chaque véhicule à un employé spécifique et de suivre les trajets effectués. En cas d’infraction, l’application permet d’identifier rapidement et facilement l’employé responsable.</strong></p>
           <ul class="list-disc list-inside">
-            <li>Développement d'une application web sécurisée (Lepathie)</li>
             <li>Analyse des besoins et création d'une maquette fonctionnelle en 4 jours</li>
             <li>Implémentation d'un système de gestion de flotte de véhicules</li>
             <li>Développement de fonctionnalités spécifiques pour 3 types d'utilisateurs les employés d’un service, le responsable d’un service, la direction.)</li>
@@ -1721,6 +1757,76 @@
         </div>
           <p><strong>Compétence :</strong><br>
              • Organiser son développement professionnel</p>
+      </div>
+    </div>
+    <div
+      id="modal-sp1"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalSp1()"
+        >&times;</button>
+
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Flowlift - Desktop
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-2 text-center">
+          <p><strong>Période :</strong> 11/11/2024 – 20/12/2024</p>
+        </div>
+
+        <!-- Galerie d’images voyantes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp11.png"
+              alt="Analyse simulation empoisonnement DNS"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Page de connexion</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp12.png"
+              alt="Configuration du chiffrement des emails"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Tableau de bord des equipments</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp13.png"
+              alt="Extrait documentation procédures de sécurité"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Tableau de bord des membres inscrits</p>
+          </div>
+        </div>
+
+
+        <div class="text-gray-700 space-y-2">
+        <p><strong>Description :</strong><br>
+          Flowlift est une application multi-plateformes de gestion de salle de sport pour les coachs sportifs.</p>
+        <ul class="list-disc list-inside">
+          <li>Authentification : sécurisation de l’accès à l’application, garantissant que seules les personnes autorisées peuvent se connecter (LOGIN).</li>
+          <li>Inscription et gestion des membres : rôles Gérant et coach, inscription des membres avec leurs informations personnelles, modification, consultation, recherche et suppression des comptes inactifs (BREAD).</li>
+          <li>Gestion des abonnements : rôle Gérant, création et paramétrage des types d’abonnements (mensuel, annuel…), attribution, renouvellement, expiration et envoi de notifications de fin de validité (BREA).</li>
+          <li>Gestion des équipements : rôles Gérant et coach, ajout, modification et suppression des équipements, suivi de leur état (disponible, maintenance), gestion de l’inventaire et planification des maintenances (BREAD).</li>
+        </ul>
+      </div>
+
+          <p><strong>Compétence :</strong><br>
+             • Organiser son développement professionnel<br>
+             • Travailler en mode projet
+          </p>
       </div>
     </div>
 
@@ -2333,6 +2439,16 @@
         document.getElementById('modal-polygon').classList.add('hidden');
         document.body.style.overflow = '';
       }
+      function openModalSp1() {
+        document.getElementById('modal-sp1').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalSp1() {
+        document.getElementById('modal-sp1').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
 
 
       window.addEventListener('click', e => {
@@ -2368,6 +2484,8 @@
         if (e.target.id === 'modal-refont-rcm') closeModalRefontRcm();
         if (e.target.id === 'modal-lepathie') closeModalLepathie();
         if (e.target.id === 'modal-polygon') closeModalPolygon();
+        if (e.target.id === 'modal-sp1') closeModalSp1();
+
 
 
 
