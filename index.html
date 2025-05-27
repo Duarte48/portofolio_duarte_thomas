@@ -78,6 +78,17 @@
       </li>
       <li>
         <a
+          href="#veille"
+          class="relative text-current transition-colors duration-300 hover:text-black
+                 after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+                 after:h-[2px] after:w-0 after:bg-black
+                 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Veille
+        </a>
+      </li>
+      <li>
+        <a
           href="#contact"
           class="relative text-current transition-colors duration-300 hover:text-black
                  after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
@@ -105,6 +116,7 @@
           <li class="list-none mb-2"><a href="#about" onclick="toggleMenu()" class="hover:text-secondary">A propos</a></li>
           <li class="list-none mb-2"><a href="#experience" onclick="toggleMenu()" class="hover:text-secondary">Expérience</a></li>
           <li class="list-none mb-2"><a href="#projects" onclick="toggleMenu()" class="hover:text-secondary">Projects</a></li>
+          <li class="list-none mb-2"><a href="#veille" onclick="toggleMenu()" class="hover:text-secondary">Veille</a></li>
           <li class="list-none"><a href="#contact" onclick="toggleMenu()" class="hover:text-secondary">Contact</a></li>
         </div>
       </div>
@@ -264,8 +276,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">JavaScript</h3>
-                  <p class="text-gray-600 font-medium">Basique</p>
+                  <h3 class="font-bold text-gray-800">UI</h3>
+                  <p class="text-gray-600 font-medium">Intermédiaire</p>
                 </div>
               </div>
               
@@ -288,8 +300,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">UI</h3>
-                  <p class="text-gray-600 font-medium">Intermédiaire</p>
+                  <h3 class="font-bold text-gray-800">JavaScript</h3>
+                  <p class="text-gray-600 font-medium">Basique</p>
                 </div>
               </div>
             </div>
@@ -324,31 +336,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">Next JS</h3>
-                  <p class="text-gray-600 font-medium">Basique</p>
-                </div>
-              </div>
-              
-              <div class="p-4 bg-gray-50 rounded-lg flex items-center gap-4">
-                <div class="bg-green-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold text-gray-800">PHP</h3>
-                  <p class="text-gray-600 font-medium">Intermédiaire</p>
-                </div>
-              </div>
-              
-              <div class="p-4 bg-gray-50 rounded-lg flex items-center gap-4">
-                <div class="bg-green-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold text-gray-800">Symfony</h3>
+                  <h3 class="font-bold text-gray-800">MySQL</h3>
                   <p class="text-gray-600 font-medium">Intermédiaire</p>
                 </div>
               </div>
@@ -372,7 +360,31 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-800">MySQL</h3>
+                  <h3 class="font-bold text-gray-800">Symfony</h3>
+                  <p class="text-gray-600 font-medium">Intermédiaire</p>
+                </div>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-lg flex items-center gap-4">
+                <div class="bg-green-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-800">PHP</h3>
+                  <p class="text-gray-600 font-medium">Intermédiaire</p>
+                </div>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-lg flex items-center gap-4">
+                <div class="bg-green-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-800">Next JS</h3>
                   <p class="text-gray-600 font-medium">Intermédiaire</p>
                 </div>
               </div>
@@ -381,10 +393,190 @@
         </div>
       </div>
     </section>
+    <!-- Sommaire des projets -->
+<section id="sommaire-projets" class="py-12 px-4 bg-light">
+  <p class="text-center text-lg mb-2">Page de</p>
+      <h1 class="text-3xl font-bold text-center mb-12">Sommaire</h1>
+  <div class="max-w-6xl mx-auto mb-8 p-6 bg-white rounded-xl shadow-md">
+    <ul class="space-y-4 text-base">
+      <!-- 1ère année -->
+      <li>
+        <h3 class="text-lg font-semibold mb-1 text-primary">1ère année</h3>
+        <ul class="list-disc list-inside ml-6 space-y-1">
+          <li>
+            <a href="#proj-lepathie"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              Préservation de l'identité numérique
+            </a>
+          </li>
+          <li>
+            <a href="#proj-protection"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              Lepathie (projet de janvier)
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 2ème année -->
+      <li>
+        <h3 class="text-lg font-semibold mb-1 text-primary">2ème année</h3>
+        <ul class="list-disc list-inside ml-6 space-y-1">
+          <li>
+            <a href="#proj-sp1"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              GestSup
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              UVdesK
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              GLPI
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              Glide Apps
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              AliSales
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              AliInventory
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              AliPurchase
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              AliApi
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              AliMarket
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              GiveMeSomeApi
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              7Activity  (SP1)
+            </a>
+          </li>
+          <li>
+            <a href="#proj-refont-rcm"
+               class="relative text-dark transition-colors duration-300 hover:text-black
+                      after:content-[''] after:absolute after:left-0 after:bottom-0
+                      after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300
+                      hover:after:w-full">
+              Flowlift (SP2)
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Stage -->
+      <li>
+        <h3 class="text-lg font-semibold mb-1 text-primary">Stage</h3>
+        <ul class="list-disc list-inside ml-6 space-y-1">
+          <li><a href="#proj-intranet"    class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">Refonte Intranet RCM</a></li>
+          <li><a href="#proj-portail"       class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">Refonte Portail de données RCM</a></li>
+
+        </ul>
+      </li>
+
+      <!-- Perso -->
+      <li>
+        <h3 class="text-lg font-semibold mb-1 text-primary">Personnel</h3>
+        <ul class="list-disc list-inside ml-6 space-y-1">
+          <li><a href="#proj-polygon"     class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">Polygon UI</a></li>
+          
+        </ul>
+      </li>
+
+      <!-- Veilles techno -->
+      <li>
+        <h3 class="text-lg font-semibold mb-1 text-primary">Veilles technologiques</h3>
+        <ul class="list-disc list-inside ml-6 space-y-1">
+          <li><a href="#proj-" class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">L’essor fulgurant de l’IA générative</a></li>
+          <li><a href="#proj-rf" class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">Tendances en cybersécurité 2025</a></li>
+          <li><a href="#proj-r" class="relative text-dark hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full">Technologies web et IA en 2025</a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-4 bg-light">
       <p class="text-center text-lg mb-2">Mes récents</p>
       <h1 class="text-3xl font-bold text-center mb-12">Projets</h1>
+      
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
@@ -907,6 +1099,29 @@
             </div>
           </div>
           <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
+          onclick="openModalSp2()"
+          >              
+          <div class="h-48 overflow-hidden">
+              <img
+                src="./assets/sp2.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2">7Activity  (SP1)</h2>
+              <p class="mb-4 text-gray-600">7Activity Le groupe Seven propose la location de véhicules exclusivement aux grands comptes via un réseau de 200 agences</p>
+              <div class="flex flex-wrap gap-2">
+                <button 
+                  class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm" 
+                  onclick="openModalSp2()"
+                >
+                  Voir Plus
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer "
           onclick="openModalSp1()"
           >              
           <div class="h-48 overflow-hidden">
@@ -931,6 +1146,99 @@
           </div>
 
     </section>
+    <!-- Veille Technologique -->
+    <section id="veille" class="py-16 px-4 bg-light">
+      <p class="text-center text-lg mb-2">Découvrez mes</p>
+      <h1 class="text-3xl font-bold text-center mb-12">Articles de veille technologique</h1>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Article 1 -->
+        <div
+          class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+          onclick="openModalArticle1()"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="./assets/ia.webp"
+              alt="Intelligence Artificielle"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">
+  L’essor fulgurant de l’IA générative
+</h2>
+<p class="mb-4 text-gray-600">
+  Depuis son lancement public fin 2022, l’IA générative s’est imposée dans la rédaction de contenus, la création d’images et la recherche
+</p>
+
+            <div class="flex flex-wrap gap-2">
+              <a
+                href="javascript:void(0)"
+                class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                onclick="openModalarticle1()"
+              >
+                Lire l'article
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Article 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+        onclick="openModalArticle2()">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="./assets/cybersecurity.jpeg"
+              alt="Web3 et Blockchain"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">Tendances en cybersécurité 2025</h2>
+            <p class="mb-4 text-gray-600">Les nouvelles menaces et les outils de défense qui émergent cette année.</p>
+            <div class="flex flex-wrap gap-2">
+              <a
+                target="_blank"
+                class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                onclick="openModalArticle2()"
+              >
+                Lire l'article
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md transform transition-transform hover:scale-105 cursor-pointer"
+        onclick="openModalArticle3()">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="./assets/article33.jpeg"
+              alt="Cybersécurité"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">Web & IA en 2025</h2>
+<p class="mb-4 text-gray-600">Découvrez comment l’intelligence artificielle redéfinit les standards et outils du développement web.</p>
+
+            <div class="flex flex-wrap gap-2">
+              <a
+                target="_blank"
+                class="px-3 py-1 border-2 border-dark text-dark font-medium rounded hover:bg-gray-100 transition-colors text-sm"
+                onclick="openModalarticle3()"
+              >
+                Lire l'article
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     
     <!-- Contact Section -->
     <section id="contact" class="py-16 px-4">
@@ -965,6 +1273,7 @@
         </div>
       </div>
     </section>
+    
     
     <!-- Footer -->
     <footer class="bg-dark text-white py-8 px-4">
@@ -1034,6 +1343,12 @@
               <li>Plugin Kanban paramétré</li>
             </ul>
           </div>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
            <p class="text-gray-700">
             <strong>Compétences :</strong><br>
             • Gérer le patrimoine informatique<br>
@@ -1111,8 +1426,19 @@
             <li>Mise en place d'un parcours d'auto-formation pour le personnel</li>
             <li>Création d'évaluations et quizz sur les bonnes pratiques de sécurité</li>
             <li>Documentation de l'application et guides utilisateurs</li>
-
           </ul>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Logiciels :</strong> GlideApps <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> No code <br>
+          </p>
             <br><strong>Compétence :</strong><br>
             • Organiser son développement professionnel
           </p>          
@@ -1186,6 +1512,12 @@
               <li>Migration vers Debian 12 avec agent GLPI intégré</li>
             </ul>
           </div>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
           <p class="text-gray-700">
             <strong>Compétences :</strong><br>
             • Gérer le patrimoine informatique<br>
@@ -1242,6 +1574,12 @@
               <li>Documentation de la procédure d'installation et d'utilisation</li>
             </ul>
           </div>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
           <p class="text-gray-700">
             <strong>Compétences :</strong><br>
             • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
@@ -1310,6 +1648,18 @@
             <li>Documentation utilisateur et technique</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.3 <br>
+          </p>
         <p class="text-gray-700">
           <strong>Compétence :</strong><br>
            • Travailler en mode projet
@@ -1375,6 +1725,19 @@
             <li>Documentation et déploiement</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+           </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> Visual Studio 2022 <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> WPF sur .NET 7 <br>
+          </p>
           <p class="text-gray-700">
           <strong>Compétence :</strong><br>
            • Travailler en mode projet
@@ -1429,7 +1792,8 @@
 
         <!-- Description -->
         <div class="text-gray-700 space-y-2">
-          <p><strong>Description :</strong></p>
+          <p><strong>Description :</strong>
+          Ce projet permet aux équipes commerciales de passer, gérer et suivre facilement leurs commandes, depuis la création jusqu’à la validation et à la préparation logistique. Il offre par ailleurs une authentification sécurisée, la gestion des comptes collaborateurs et clients grands comptes ainsi que l’administration du catalogue produits (catégories, stocks et fiches détaillées).</p>
           <ul class="list-disc list-inside">
             <li>Conception et modélisation de l'application de gestion des ventes</li>
             <li>Développement frontend avec introduction à JavaScript et React</li>
@@ -1440,7 +1804,19 @@
             <li>Utilisation de frameworks et application des bonnes pratiques</li>
           </ul>
         </div>
-         <!-- Compétences -->
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+            <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.3 <br>
+          </p>
+                   <!-- Compétences -->
         <p class="text-gray-700">
           <strong>Compétence :</strong><br>
           • Travailler en mode projet
@@ -1492,6 +1868,18 @@
             <li>Documentation technique et guide utilisateur</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+            <p class="text-gray-700">
+            <strong>Logiciels :</strong> Android Studio <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> SDK Flutter 3.32.0 <br>
+          </p>
          <!-- Compétences -->
         <p class="text-gray-700">
           <strong>Compétence :</strong><br>
@@ -1518,6 +1906,20 @@
           <strong>Période :</strong> 08/01/2024 - 12/01/2024
         </p>
 
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/lepathie.png"
+              alt="Interface Clients"
+              class="w-full max-w-md h-auto object-contain rounded-lg shadow-md"
+            />
+            <p class="mt-2 text-sm text-gray-600">Interface “Clients”</p>
+          </div>
+          <!-- Image 2 -->
+          
+        </div>
+
        
 
         <!-- Description -->
@@ -1535,6 +1937,19 @@
             <li>Création d'une vidéo commerciale en anglais pour présenter l'application</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Groupe <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> AP <br>
+          </p>
+           </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.3 <br>
+          </p>
          <!-- Compétences -->
         <p class="text-gray-700">
           <strong>Compétences :</strong><br>
@@ -1608,6 +2023,19 @@
             <li>Tests d'intégration et de performance</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+           </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.3 <br>
+          </p>
         <p class="text-gray-700">
           <strong>Compétences :</strong><br>
           • Travailler en mode projet<br>
@@ -1683,6 +2111,19 @@
             <li>Documentation technique de l'API et de la base de données</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> TP <br>
+          </p>
+           </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm, MySQL <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.3 <br>
+          </p>
         <p class="text-gray-700">
           <strong>Compétence :</strong> <br>
           • Organiser son développement professionnel
@@ -1755,6 +2196,9 @@
             <li>Formation des utilisateurs aux bonnes pratiques</li>
           </ul>
         </div>
+         <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
           <p><strong>Compétence :</strong><br>
              • Organiser son développement professionnel</p>
       </div>
@@ -1822,11 +2266,25 @@
           <li>Gestion des équipements : rôles Gérant et coach, ajout, modification et suppression des équipements, suivi de leur état (disponible, maintenance), gestion de l’inventaire et planification des maintenances (BREAD).</li>
         </ul>
       </div>
+       <p class="text-gray-700">
+            <strong>Organisation :</strong> Groupe <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> AP <br>
+          </p>
+                   <p class="text-gray-700">
+            <strong>Logiciels :</strong> Visual Studio 2022 <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> WPF sur .NET 7 <br>
+          </p>
 
           <p><strong>Compétences :</strong><br>
              • Organiser son développement professionnel<br>
              • Travailler en mode projet
           </p>
+           </p>
+         
       </div>
     </div>
 
@@ -2093,6 +2551,19 @@
           <p>
             <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
           </p>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> Stage <br>
+          </p>
+           </p>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.2 - Symfony <br>
+          </p>
           <p><strong>Compétences :</strong><br>
              • Gérer le patrimoine informatique<br>
              • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
@@ -2151,6 +2622,12 @@
           <p>
             <strong>Description :</strong> Refonte du back-end et front-end d’un site web avec migration vers une version plus récente de PHP et de MySQL, refactorisation du code et intégration des nouveautés du langage pour améliorer la maintenabilité et les performances.
           </p>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> Stage <br>
+          </p>
           <p><strong>Compétences :</strong><br>
              • Gérer le patrimoine informatique<br>
              • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
@@ -2160,6 +2637,12 @@
              • Organiser son développement professionnel<br>
             </p>
         </div>
+           <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.2 - Symfony <br>
+          </p>
       </div>
     </div>
 
@@ -2220,6 +2703,18 @@
           <p>
             <strong>Description :</strong> Polygon UI est une interface utilisateur développée avec Next.js et TailwindCSS, servant de base pour une plateforme de jeu
           </p>
+           <p class="text-gray-700">
+            <strong>Organisation :</strong> Individuel <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> Personnel <br>
+          </p>
+             <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> TypeScript 5.8 - Next.js 15.1.3 <br>
+          </p>
           <p><strong>Compétences :</strong><br>
              • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
              • Travailler en mode projet<br>
@@ -2230,7 +2725,325 @@
        
       </div>
     </div>
+    <div
+      id="modal-sp2"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+        <!-- Bouton Fermer -->
+        <button
+          class="absolute top-4 right-4 text-3xl font-bold hover:text-gray-600"
+          onclick="closeModalSp2()"
+        >&times;</button>
 
+        <!-- Titre -->
+        <h2 class="text-2xl text-center font-bold mb-4">
+          Projet 7Activity  
+        </h2>
+
+        <!-- Période & Compétences -->
+        <div class="text-gray-700 space-y-1 text-center mb-6">
+          <p><strong>Période :</strong> 01/11/2024 - 13/02/2025</p>
+          
+        </div>
+
+        <!-- Galerie d’images avec légendes -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mb-6">
+          <!-- Image 1 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp21.png"
+              alt="Exemple interface KeePass"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Page de connexion</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp22.png"
+              alt="Analyse de la robustesse des mots de passe"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Tableau de bord des réservations</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./assets/sp23.png"
+              alt="Sensibilisation à la sécurité"
+              class="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
+            />
+            <p class="mt-2 text-sm text-gray-600 text-center">Formulaire de réservation</p>
+          </div>
+        </div>
+
+         <div class="text-gray-700 space-y-4">
+  <p><strong>Description :</strong> L’application web 7Activity permet aux employés d'une agence Seven de gérer les processus métiers de retrait, d'ajout et de restitution d'un véhicule.</p>
+  <ul class="list-disc list-inside space-y-2">
+    <li><strong>Authentification :</strong> sécurisation de l’accès à l’application, garantissant que seules les personnes autorisées peuvent se connecter (LOGIN).</li>
+    <li><strong>Gestion des utilisateurs :</strong> client-booker et client-manager, inscription des membres avec leurs informations personnelles, modification, consultation, recherche et suppression des comptes inactifs (BREAD).</li>
+    <li><strong>Gestion des réservations :</strong> réservations d'un trajet avec conducteur, création et paramétrage, attribution, envoi de notifications de fin de réservation (BREAD).</li>
+    <li><strong>Gestion des conducteurs :</strong> ajout, modification et suppression des conducteurs, suivi de leur état (disponible, pas disponible), gestion de l’inventaire et planification des maintenances (BREAD).</li>
+  </ul>
+   <p class="text-gray-700">
+            <strong>Organisation :</strong> Groupe <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Type :</strong> AP <br>
+          </p>
+             <p class="text-gray-700">
+            <strong>Logiciels :</strong> PhpStorm <br>
+          </p>
+          <p class="text-gray-700">
+            <strong>Technologie utilisé :</strong> PHP 8.2 - Laravel <br>
+          </p>
+  <p><strong>Compétences :</strong><br>
+     • Répondre aux incidents et aux demandes d’assistance et d’évolution<br>
+     • Travailler en mode projet<br>
+  </p>
+</div>
+        <!-- Description -->
+       
+      </div>
+    </div>
+    <!-- Modal Article 1 -->
+    <!-- Modal Article 1 -->
+<!-- Modal Article 1 -->
+<div
+  id="modal-article1"
+  class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-article1-title"
+>
+  <div
+    class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6"
+  >
+    <!-- Bouton Fermer -->
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-3xl font-bold leading-none hover:text-gray-600"
+      aria-label="Fermer le modal"
+      onclick="closeModalArticle1()"
+    >&times;</button>
+
+    <!-- Titre -->
+    <h2
+      id="modal-article1-title"
+      class="text-2xl text-center font-bold mb-4"
+    >
+      L’essor rapide de l’IA générative
+    </h2>
+
+    <!-- Date de publication -->
+    <div class="text-gray-700 text-center mb-6">
+      <p>
+        <strong>Date de publication :</strong>
+        2 mai 2025
+      </p>
+    </div>
+
+    <!-- Introduction et Illustration côte à côte -->
+    <div class="flex flex-col md:flex-row items-center mb-6 gap-6">
+      <!-- Texte d'introduction -->
+      <div class="md:w-2/3 text-gray-700">
+        <p>
+          
+          Depuis son lancement public fin 2022, l’IA générative a connu un essor fulgurant. En quelques mois seulement, les modèles de langage comme ChatGPT et leurs variantes se sont imposés dans les usages professionnels et grand public, transformant notre manière de créer et d’interagir avec la technologie.
+        </p>
+      </div>
+      <!-- Illustration -->
+      <figure class="md:w-1/3 flex flex-col items-center">
+        <img
+          src="./assets/article1.png"
+          alt="Illustration de l'essor de l'IA générative"
+          class="w-40 h-auto object-contain rounded-lg shadow-lg"
+        />
+        <figcaption class="mt-2 text-sm text-gray-600 text-center">
+          L’essor rapide de l’IA générative
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Paragraphe supplémentaire en dessous -->
+    <div class="text-gray-700 space-y-4">
+      <p>
+        Cette progression rapide s’explique par deux ingrédients clés : d’une part, l’architecture des transformeurs, capable de traiter d’énormes volumes de données grâce à l’apprentissage automatique, et d’autre part, l’accès facile via des interfaces conviviales (web, API). Résultat : en moins de deux ans, l’IA générative a trouvé sa place dans des domaines aussi variés que la rédaction de contenus, la conception graphique assistée, le prototypage d’applications et même la recherche scientifique.
+      </p>
+       <p>
+  <strong>Source :</strong>
+      <a
+        href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-600 hover:underline"
+      >
+        McKinsey & Company — What is generative AI?
+      </a>
+    </p>
+
+    </div>
+  </div>
+</div>
+<div
+  id="modal-article2"
+  class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-article2-title"
+>
+  <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+    <!-- Bouton Fermer -->
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-3xl font-bold leading-none hover:text-gray-600"
+      aria-label="Fermer le modal"
+      onclick="closeModalArticle2()"
+    >&times;</button>
+
+    <!-- Titre -->
+    <h2
+      id="modal-article2-title"
+      class="text-2xl text-center font-bold mb-4"
+    >
+      Tendances cybersécurité 2025
+    </h2>
+
+    <!-- Date de publication -->
+    <div class="text-gray-700 text-center mb-6">
+      <p><strong>Date :</strong> 14 mai 2025</p>
+    </div>
+
+    <!-- Contenu avec image à droite -->
+    <div class="flex flex-col md:flex-row items-start mb-6 gap-6">
+      <!-- Texte -->
+      <div class="md:w-2/3 text-gray-700">
+        <p>
+          En 2025, les ransomwares se complexifient : les attaquants pratiquent la double extorsion en volant d’abord les données, puis en chiffrant les systèmes pour exiger encore plus. Parallèlement, les attaques DDoS exploitent désormais plusieurs vecteurs simultanément et atteignent des débits record, mettant à mal les défenses classiques.
+        </p>
+        <p>
+          Les intelligences artificielles autonomes deviennent des alliées indispensables. Elles scrutent en continu le réseau, détectent les anomalies et réagissent en temps réel, parfois plus vite que ne le pourrait un analyste humain.
+        </p>
+      </div>
+      <!-- Image à droite -->
+      <figure class="md:w-1/3 flex flex-col items-center">
+        <img
+          src="./assets/article2.png"
+          alt="Illustration cybersécurité 2025"
+          class="w-40 h-auto object-contain rounded-lg shadow-lg"
+        />
+        <figcaption class="mt-2 text-sm text-gray-600 text-center">
+          Illustration : cybersécurité 2025
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Autres points en paragraphes -->
+    <div class="text-gray-700 space-y-4">
+      <p>
+        L’avènement de l’informatique quantique pousse au développement du chiffrement post-quantique pour protéger les clés sensibles contre les capacités grandissantes des calculateurs quantiques.
+      </p>
+      <p>
+        Les violations de données dans le secteur de la santé explosent : chaque incident coûte en moyenne plusieurs millions de dollars et met en péril la confidentialité des patients.
+      </p>
+      <p>
+        Avec l’essor des flottes satellitaires, la cybersécurité spatiale devient cruciale. Les opérateurs renforcent la protection des satellites et des stations au sol pour prévenir toute perturbation des services.
+      </p>
+      <p>
+        <strong>Source :</strong>
+        <a
+          href="https://www.forbes.com/sites/chuckbrooks/2025/04/05/key-cybersecurity-challenges-in-2025-trends-and-observations/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 hover:underline"
+        >
+          Forbes – Key Cybersecurity Challenges in 2025: Trends and Observations
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div
+  id="modal-article3"
+  class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-article3-title"
+>
+  <div class="bg-white rounded-lg max-w-4xl w-full relative overflow-y-auto max-h-[90vh] p-8 space-y-6">
+    <!-- Bouton Fermer -->
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-3xl font-bold leading-none hover:text-gray-600"
+      aria-label="Fermer le modal"
+      onclick="closeModalArticle3()"
+    >&times;</button>
+
+    <!-- Titre -->
+    <h2
+      id="modal-article3-title"
+      class="text-2xl text-center font-bold mb-4"
+    >
+      Technologies web et IA en 2025<br /><small>(Intégration, normes, frameworks)</small>
+    </h2>
+
+    <!-- Date de publication -->
+    <div class="text-gray-700 text-center mb-6">
+      <p><strong>Date :</strong> 23 mai 2025</p>
+    </div>
+
+    <!-- Introduction et Illustration côte à côte -->
+    <div class="flex flex-col md:flex-row items-center mb-6 gap-6">
+      <div class="md:w-2/3 text-gray-700">
+        <p>
+          En 2025, les navigateurs embarquent des moteurs d’IA natifs. Les pages web peuvent exécuter des modèles sans serveur.
+        </p>
+        <p>
+          Les développeurs utilisent des APIs standard pour faire tourner du code ML directement dans le client.
+        </p>
+      </div>
+      <figure class="md:w-1/3 flex flex-col items-center">
+        <img
+          src="./assets/article3.png"
+          alt="Illustration Technologies Web IA 2025"
+          class="w-40 h-auto object-contain rounded-lg shadow-lg"
+        />
+        <figcaption class="mt-2 text-sm text-gray-600 text-center">
+          Illustration : IA et web 2025
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Contenu résumé -->
+    <div class="text-gray-700 space-y-4">
+      <p>
+        Les nouvelles <strong>WebAI API</strong> donnent accès au GPU du navigateur pour des calculs locaux jusqu’à 5× plus rapides.
+      </p>
+      <p>
+        Les agents conversationnels embarqués offrent une aide instantanée, même hors ligne.
+      </p>
+      <p>
+        Les <strong>Design Systems pilotés par IA</strong> adaptent automatiquement couleurs et mise en page selon l’utilisateur.
+      </p>
+      <p>
+        Les pipelines de <strong>CI/CD assistée par IA</strong>(étapes d’intégration du code) génèrent et corrigent du code dès la compilation.
+      </p>
+      <p>
+        <strong>Source :</strong>
+        <a
+          href="https://www.designrush.com/agency/web-development-companies/trends/ai-and-web-development"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 hover:underline"
+        >
+          DESIGNRUSH — The Future Role of AI in Web Development: What To Expect
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
 
 
 
@@ -2449,7 +3262,46 @@
         document.getElementById('modal-sp1').classList.add('hidden');
         document.body.style.overflow = '';
       }
+      function openModalArticle1() {
+        document.getElementById('modal-article1').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
 
+      // Ferme le modal Sécurité Applicative
+      function closeModalArticle1() {
+        document.getElementById('modal-article1').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalArticle2() {
+        document.getElementById('modal-article2').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalArticle2() {
+        document.getElementById('modal-article2').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalArticle3() {
+        document.getElementById('modal-article3').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalArticle3() {
+        document.getElementById('modal-article3').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      function openModalSp2() {
+        document.getElementById('modal-sp2').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Ferme le modal Sécurité Applicative
+      function closeModalSp2() {
+        document.getElementById('modal-sp2').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
 
       window.addEventListener('click', e => {
         const m2l    = document.getElementById('modal-m2l');
@@ -2485,6 +3337,12 @@
         if (e.target.id === 'modal-lepathie') closeModalLepathie();
         if (e.target.id === 'modal-polygon') closeModalPolygon();
         if (e.target.id === 'modal-sp1') closeModalSp1();
+        if (e.target.id === 'modal-sp2') closeModalSp2();
+        if (e.target.id === 'modal-article1') closeModalArticle1();
+        if (e.target.id === 'modal-article2') closeModalArticle2();
+        if (e.target.id === 'modal-article3') closeModalArticle3();
+
+
 
 
 
